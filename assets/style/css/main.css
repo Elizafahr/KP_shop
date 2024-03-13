@@ -1,1 +1,194 @@
+:root {
+  --ligth-blue: #f0f5fd;
+  --cloudy: #dbe9ff;
+  --main: #0069c6;
+  --dark: #000;
+  --grey: #858c95;
+  --black: #131b22;
+  --red: #ff0000;
+  --really-ligth-gray: #f8f9fb;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
 /*# sourceMappingURL=main.css.map */
+.box {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1200px) {
+  .box {
+    width: 90%;
+  }
+}
+
+.btn {
+  width: max-content !important;
+  padding: 10px 35px !important;
+  border-radius: 120px !important;
+  color: white !important;
+}
+
+.btn-blue {
+  background-color: var(--main) !important;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0;
+}
+.nav-top,
+.nav-bottom {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+.navbar-nav {
+  display: flex;
+  flex-direction: row !important;
+  gap: 30px;
+}
+.navbar-nav a {
+  color: var(--black);
+}
+.navbar-nav a:hover {
+  color: var(--main);
+}
+.nav-btns a img,
+.location img {
+  height: 20px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  padding: 5px 15px;
+  border: 1px solid gainsboro;
+  width: max-content;
+  border-radius: 6px;
+}
+@media screen and (max-width: 900px) {
+  .location {
+    margin-bottom: 15px;
+  }
+}
+.location p {
+  padding: 0;
+  margin: 0;
+}
+.search input {
+  border-radius: 6px;
+}
+/* .search #searchIN {
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+.search button {
+  padding: 0;
+  margin: 0;
+}
+.search form {
+  display: flex;
+  align-items: center;
+} */
+
+.card-img-top {
+  background-color: var(--ligth-blue);
+  width: 284px;
+}
+.btn-primary {
+  background-color: var(--main);
+}
+.card {
+  /* padding: 0px !important;
+  width: 300px !important;
+  min-width: 250px !important; */
+  height: max-content;
+}
+#items {
+  /* display: flex !important; */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+}
+
+.blue {
+  color: var(--main);
+}
+
+.ligth {
+  color: gray;
+}
+.lastPrice {
+  text-decoration: line-through;
+}
+
+.navbar-collapse {
+  justify-content: space-around;
+}
+
+.flex {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+@media screen and (max-width: 900px) {
+  .flex {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+.map img {
+  width: 100%;
+  height: 100%;
+}
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact p {
+  color: var(--grey);
+}
+.contact input {
+  background-color: var(--really-ligth-gray);
+  outline: none !important;
+}
+.map {
+  position: relative;
+}
+.info-map {
+  background-color: white;
+  border: 1px solid --really-ligth-gray;
+  border-radius: 40px;
+  position: absolute;
+  bottom: 0px;
+  margin: 32px;
+  padding: 25px;
+}
+.info-map h4 {
+  font-size: 22px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.info-map p {
+  font-size: 16px;
+}
+span {
+  color: #0069c6;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
