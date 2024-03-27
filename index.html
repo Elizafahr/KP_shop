@@ -1,182 +1,432 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <!-- Обязательные метатеги -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>online-shop</title>
-    <link rel="stylesheet" href="/assets/style/css/main.css" />
+<html lang="en">
 
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      
-      <a class="navbar-brand" href="#">
-        <img
-          src="/assets/img/svg/icons/Sportify-logo.svg"
-          height="40px"
-          width="150px"
-        />
-      </a>
-      <form class="form-inline my-2 my-lg-0">
-        <input
-          class="form-control mr-sm-2"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-        />
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-          Search
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sportify</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/assets/style/css/main.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <header-container class="header-container">
+    <header class="mb-3 box">
+      <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr">
+        <div class="">
+          <a href="#" class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-dark text-decoration-none"
+            aria-expanded="false">
+            <img width="140" height="35" src="/assets/img/svg/Sportify.svg" alt="Sportify" />
+          </a>
+        </div>
+
+        <div class="d-flex justify-content-between">
+          <form class="w-70 me-3">
+            <input type="search" class="form-control" placeholder="Input search query..." aria-label="Search" />
+          </form>
+
+          <div class="flex-shrink-0 location-header">
+            <img src="/assets/img/svg/icons/icon-location.svg" alt="location" width="20" height="20"
+              class="rounded-circle" />
+            <span>Екатеринбург</span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <header class="box">
+      <div class="d-flex flex-wrap">
+        <ul class="nav me-auto">
+          <li class="nav-item">
+            <a href="#" class="nav-link link-dark px-2 active" aria-current="page">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link link-dark px-2">Каталог</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link link-dark px-2">О нас</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link link-dark px-2">Контакты</a>
+          </li>
+        </ul>
+        <ul class="nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link link-dark px-2"><img height="20" src="/assets/img/png/icons/cart.png"
+                alt="" /></a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link link-dark px-2"><img height="20" src="/assets/img/png/icons/icon-user.png"
+                alt="" /></a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link link-dark px-2"><img height="20" src="/assets/img/png/icons/icon-phone.png"
+                alt="" /></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="header-content">
+     <div class="box padd-50 d-flex d-lg-8">
+      <div class="left-area w-100 ">
+        <div class="title w-100 d-flex flex-column ">
+          <h1 class="d-flex  align-self-lg-start  ">Свобода движения, </h1>
+          <h1 class="d-flex  align-self-lg-end  ">радость открытий!</h1>
+        </div>
+        <p class="subtitle">
+          Большой выбор велосипедов от Вело Юг 
+        </p>
+        <button class="btn btn-blue">
+          Перейти в каталог
         </button>
-      </form>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Переключить навигацию"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Главная <span class="sr-only">(текущая)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">О нас</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Каталог</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Контакты</a>
-          </li>
-        </ul>
       </div>
-    </nav> -->
+      <img src="/assets/img/png/Велик 1 блок.png" alt="">
+     </div>
 
-    <div class="nav box">
-      <div class="nav-top">
-        <div class="logo">
-          <a class="navbar-brand" href="#">
-            <img
-              src="/assets/img/svg/icons/Sportify-logo.svg"
-              height="40px"
-              width="150px"
-            />
-          </a>
+    </div>
+  </header-container>
+
+  <main>
+    <div id="cssportal-grid" class="categories box">
+      <div id="div1" class=" ">
+        <h3>Горные велосипеды</h3>
+      </div>
+      <div id="div2" class="categ">
+        <h3>Горные велосипеды</h3>
+      </div>
+      <div id="div3" class="categ">
+        <h3>Горные велосипеды</h3>
+      </div>
+      <div id="div4" class="categ">
+        <h3>Горные велосипеды</h3>
+      </div>
+      <div id="div5" class="categ">
+        <h3>Горные велосипеды</h3>
+      </div>
+    </div>
+
+    <div class="special box">
+      <h2>Специально для вас</h2>
+      <swiper-container id="items" class="mySwiper">
+       
+        <swiper-slide></swiper-slide>
+        <swiper-slide></swiper-slide>
+        <swiper-slide></swiper-slide>
+        <swiper-slide></swiper-slide>
+        <swiper-slide></swiper-slide>
+        <swiper-slide></swiper-slide>
+        <swiper-slide></swiper-slide>
+        <swiper-slide></swiper-slide>
+        <swiper-slide></swiper-slide>
+        <swiper-slide></swiper-slide>
+        <swiper-slide></swiper-slide>
+        <swiper-slide></swiper-slide>
+  <swiper-slide></swiper-slide>
+        <swiper-slide></swiper-slide>
+        <swiper-slide></swiper-slide>
+        <swiper-slide></swiper-slide>
+        <swiper-slide></swiper-slide>
+        <swiper-slide></swiper-slide>
+        <swiper-slide></swiper-slide>
+        <swiper-slide></swiper-slide>
+        <swiper-slide></swiper-slide>
+        <swiper-slide></swiper-slide>
+        <swiper-slide></swiper-slide>
+        <swiper-slide></swiper-slide>
+
+      </swiper-container>
+    </div>
+
+    <section class="about">
+      <div class="box about-text d-flex row-gap-3 flex-wrap justify-content-between align-content-lg-start">
+        <div class="years col-lg-5 col-sm-12">
+          <img src="/assets/img/svg/15Years.png" alt="" />
         </div>
+        <div class="about-text col-lg-6 col-sm-12">
+          <h2>Мы команда профессианалов!</h2>
+          <p class="ligth">
+            Наш опыт и знания воплощаются в каждой детали. Год от года мы
+            совершенствуем наши велосипеды, делая их не просто качественными,
+            но и доступными. Наша миссия - сделать велосипедную езду
+            максимально удобной для каждого. Покоряйте дороги с нами!
+          </p>
+        </div>
+      </div>
+      <div class="box about-icons">
+        <div class="about-cards d-flex justify-content-between flex-wrap row-gap-3">
+          <div class="about-card d-flex flex-column gap-2">
+            <img src="/assets/img/svg/shopping bag.svg" alt="" height="60px" />
+            <span>Широкий ассортимент</span>
+          </div>
 
-        <div class="search">
-          <form class="form-inline my-2 my-lg-0">
-            <input
-              class="form-control mr-sm-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn  my-2 my-sm-0" type="submit">
-              <img src="/assets/img/svg/icons/icon-search.svg" alt="" />
+          <div class="about-card d-flex flex-column gap-2">
+            <img src="/assets/img/svg/document box.svg" alt="" height="60px" />
+            <span>Гарантия на товар</span>
+          </div>
+
+          <div class="about-card d-flex flex-column gap-2">
+            <img src="/assets/img/svg/plus.svg" alt="" height="60px" />
+            <span>Продажа по Екатеринбургу</span>
+          </div>
+
+          <div class="about-card d-flex flex-column gap-2">
+            <img src="/assets/img/svg/rotate right.svg" alt="" height="60px" />
+            <span>Возврат товаров</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rewiewsContainer" class="padd-50 " class="rewiewsContainer">
+      <div id="rewiews" class="rewiews box      ">
+        <h2 class="mb-3">Отзывы о нас</h2>
+        <swiper-container id="mySwiperRewiews" class="mySwiperRewiews swiper2 " slides-per-view="2"
+          centered-slides="true" space-between="30">
+        </swiper-container>
+      </div>
+
+      <div class="links-rewiews d-flex   box ">
+        <div class="links-rewiew   d-flex flex-column ">
+          <img src="/assets/img/png/ya_maps____ 1.png" width="165" alt="">
+          <div class="bottom-rewiew d-flex justify-content-between    align-content-center align-items-center">
+            <span>4.8</span>
+            <div class="raiting">
+              <div class="stars">
+                <img src="/assets/img/png/icons/Star.png" alt="Star">
+                <img src="/assets/img/png/icons/Star.png" alt="Star">
+                <img src="/assets/img/png/icons/Star.png" alt="Star">
+                <img src="/assets/img/png/icons/Star.png" alt="Star">
+                <img src="/assets/img/png/icons/Star.png" alt="Star">
+              </div>
+              <p>1220 отзывов · 3564 оценки</p>
+            </div>
+            <button class="btn btn-white">Оставить отзыв</button>
+          </div>
+        </div>
+        <div class="links-rewiew   d-flex flex-column ">
+          <img src="/assets/img/png/google.png" width="165" alt="">
+          <div class="bottom-rewiew d-flex justify-content-between    align-content-center align-items-center">
+            <span>4.8</span>
+            <div class="raiting ">
+              <div class="stars   ">
+                <img src="/assets/img/png/icons/Star.png" alt="Star">
+                <img src="/assets/img/png/icons/Star.png" alt="Star">
+                <img src="/assets/img/png/icons/Star.png" alt="Star">
+                <img src="/assets/img/png/icons/Star.png" alt="Star">
+                <img src="/assets/img/png/icons/Star.png" alt="Star">
+              </div>
+              <p>1220 отзывов · 3564 оценки</p>
+            </div>
+            <button class="btn btn-white">Оставить отзыв</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="angry-grid gallery padd-50 gap-3 ">
+      <div id="item-0"></div>
+      <div id="item-1"></div>
+      <div id="item-2"></div>
+      <div id="item-3"></div>
+      <div id="item-4"></div>
+      <div id="item-5"></div>
+    </div>
+
+    <div class="faq box ">
+      <div class="text d-flex flex-column padd-50  gap-3 ">
+        <h2>Частозадаваемые вопросы</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat</p>
+      </div>
+      <div class="accordion accordion-flush   " id="accordionFlushExample">
+        <div class="accordion-item d-lg-5">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Accordion Item #1
             </button>
-          </form>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Переключить навигацию"
-          >
-          
-          </form>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Переключить навигацию"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
+              <code>.accordion-flush</code> class. This is the first item's accordion body.
+            </div>
+          </div>
         </div>
-
-        <div class="location">
-          <img src="/assets/img/png/icons/icon-location.png" alt="" />
-          <p>Екатеринбург</p>
+        <div class="accordion-item d-lg-5">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              Accordion Item #2
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
+              <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being
+              filled with some actual content.
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div class="nav-bottom">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Главная <span class="sr-only">(текущая)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">О нас</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Каталог</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Контакты</a>
-          </li>
-        </ul>
-
-        <div class="nav-btns">
-          <a class="navbar-brand" href="#">
-            <img src="/assets/img/svg/icons/icon-user.svg" />
-          </a>
-          <a class="navbar-brand" href="#">
-            <img src="/assets/img/svg/icons/icon-cart.svg" />
-          </a>
-          <a class="navbar-brand" href="#">
-            <img src="/assets/img/svg/icons/icon-phone.svg" />
-          </a>
+        <div class="accordion-item d-lg-5">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              Accordion Item #3
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
+              <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting
+              happening here in terms of content, but just filling up the space to make it look, at least at first
+              glance, a bit more representative of how this would look in a real-world application.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item d-lg-5">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseFourth" aria-expanded="false" aria-controls="flush-collapseOne">
+              Accordion Item #1
+            </button>
+          </h2>
+          <div id="flush-collapseFourth" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
+              <code>.accordion-flush</code> class. This is the first item's accordion body.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item d-lg-5">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseFiveth" aria-expanded="false" aria-controls="flush-collapseTwo">
+              Accordion Item #5
+            </button>
+          </h2>
+          <div id="flush-collapseFiveth" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
+              <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being
+              filled with some actual content.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item d-lg-5">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseThree">
+              Accordion Item #3
+            </button>
+          </h2>
+          <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
+              <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting
+              happening here in terms of content, but just filling up the space to make it look, at least at first
+              glance, a bit more representative of how this would look in a real-world application.
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="header">
-      <div class="textArea_header">
-        <div class="h2">
-          <h1>Свобода движения,</h1>
-          <h1>радость открытий!</h1>
+
+   
+    <!-- <section class="contact">
+      <div class="box row">
+        <div class="d-lg-5"></div>
+        <div class="d-lg-6">
+          <form>
+               <div class="form-group  ">
+                 <input type="text" placeholder="First Name"  id="inputName">
+              </div>
+              <div class="form-group  ">
+                 <input type="email" placeholder="Email"   id="inputEmail4">
+              </div>
+              <div class="form-group  ">
+                 <textarea type="text" placeholder="Message"  id="inputText">
+              </div>
+             <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                  Check me out
+                </label>
+              </div>
+            </div>  
+            <button type="submit" class="btn btn-primary">Sign in</button>
+          </form>
         </div>
-        <p class="subtitle">Большой выбор велосипедов от Вело Юг</p>
-        <button class="btn-blue btn">Перейти в каталог</button>
       </div>
+    </section> -->
+  </main>
+
+
+  <div class="  footer  ">
+    <img src="/assets/img/png/footer-header.png" alt="">
+    <div class="footer-full">
+      <footer class="   box  padd-50">
+        <div class="row  ">
+          <div class="col-lg-3">
+            <h5>Каталог</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Велосипеды</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Самокаты</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Скейтборды</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Аксессуары</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3">
+            <h5>Покупателям</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Где купить</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3">
+            <h5>Связаться с нами</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="tel:88005553535">+7-800-555-35-35</a>
+              </li>
+
+            </ul>
+
+          </div>
+
+
+          <div class="col-2">
+
+            <h5>Связаться с нами</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Какойто город, ул какая то, дом 80
+              </li>
+
+            </ul>
+          </div>
+        </div>
+        <p class="text-center">© 2024 Elizafahr. Все права защищены.</p>
+
+      </footer>
     </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  </body>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+
+  <script src="js/main.js"></script>
+  <script src="js/items.js"></script>
+  <script src="js/sliderItems.js"></script>
+  <script src="js/sliderRewiews.js"></script>
+</body>
+
 </html>
