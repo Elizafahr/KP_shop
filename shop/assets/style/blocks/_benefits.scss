@@ -1,0 +1,49 @@
+.benefits {
+  position: relative;
+
+  &::after {
+    content: "II";
+    left: calc(50% + 550px);
+    transform: translate(-50%, 0%);
+    @include decorNum;
+  }
+
+  .container {
+    max-width: 824px;
+    margin: 120px auto;
+
+    @include mediaTablet {
+      margin: 60px auto;
+    }
+  }
+
+  &__row {
+    display: flex;
+    gap: 70px;
+
+    @include mediaTablet {
+      flex-wrap: wrap;
+      gap: 50px;
+    }
+    @include mediaMobile {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    text-align: center;
+    @include mediaTablet {
+      width: 40%;
+    }
+  }
+
+  &__item-image {
+    margin-bottom: 53px;
+  }
+  &__item-text {
+    font-size: 20px;
+    line-height: 1.35;
+    font-family: $font-secondary;
+    font-weight: 300;
+  }
+}
