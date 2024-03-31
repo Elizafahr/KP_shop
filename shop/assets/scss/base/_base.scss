@@ -1,29 +1,9 @@
-// Fonts
-
-$font-main: "Roboto", sans-serif;
-
-// Colors
-$white: #fff;
-$footer-bg: #2d343c;
-$ligth-blue: #f0f5fd;
-$cloudy: #dbe9ff;
-$main: #0069c6;
-$dark: #000;
-$grey: #858c95;
-$black: #131b22;
-$red: #ff0000;
-$darkBlue: #001633;
-$really-ligth-gray: #f8f9fb;
-
-// Media
-$tablet: 959px;
-$mobile: 400px;
-
-// @import "./base/_reset.scss";
-// @import "./base/_vars.scss";
-// @import "./base/_mixins.scss";
-// @import "./base/_base.scss";
-
+ 
+.box{
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
+} 
 /*база*/
 body {
   font-family: $font-main;
@@ -60,7 +40,7 @@ a {
   padding: 50px 0 !important;
 }
 /* main-container */
-.box,
+ 
 .angry-grid {
   max-width: 1140px;
   padding: 0 15px;
@@ -335,30 +315,5 @@ main {
     }
   }
 }
-
-.contact {
-  .map {
-    background-image: url("/assets/img/png/map.png");
-    background-size: cover;
-    border-radius: 15px;
-    position: relative;
-    min-height: 350px;
-
-    .low {
-      background-color: $white;
-      position: absolute;
-      bottom: 0px;
-      left: 0;
-      margin: 10px;
-      padding: 15px;
-      border-radius: 5px;
-    }
-  }
-  .form-group {
-    margin-bottom: 15px;
-  }
-}
-
-span {
-  color: $main;
-}
+ 
+ 

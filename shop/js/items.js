@@ -26,7 +26,7 @@ function loadItems() {
         "₽ </h5></div>";
       out += '<p class="card-text">' + data[key]["name"] + "</p>";
 
-      out += "<a href='#' class='btn btn-primary'>Выбрать</a>";
+      out += '<a href="pages/product.html?id=' + data[key]["id"]  + '" class="btn btn-primary">Выбрать</a>';
       out += "</div>";
       out += "</div>";
     }
