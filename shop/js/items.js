@@ -19,7 +19,7 @@ function loadItems() {
         '  <div class="d-flex align-items-center gap-2"> ' +
         ' <h5 class="card-title blue">' +
         data[key]["cost"] +
-        "₽ </h5> ";
+        "₽ </h5> ";нет
       out +=
         ' <h5 class="card-title  small ligth stroked lastPrice">' +
         data[key]["costLast"] +
