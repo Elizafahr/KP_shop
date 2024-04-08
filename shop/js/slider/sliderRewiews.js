@@ -6,6 +6,7 @@ Object.assign(swiperElRewiews, {
   spaceBetween: 10,
   navigation: true,
   scroll: true,
+  loop: true,
 });
 
 swiperElRewiews.initialize();

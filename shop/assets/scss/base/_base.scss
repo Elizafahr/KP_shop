@@ -1,9 +1,8 @@
- 
-.box{
+.box {
   max-width: 1140px;
   padding: 0 15px;
   margin: 0 auto;
-} 
+}
 /*база*/
 body {
   font-family: $font-main;
@@ -40,7 +39,7 @@ a {
   padding: 50px 0 !important;
 }
 /* main-container */
- 
+
 .angry-grid {
   max-width: 1140px;
   padding: 0 15px;
@@ -143,6 +142,7 @@ main {
       min-width: 250px;
       border: none;
       margin-left: 20px;
+      max-width: 300px;
     }
     .image-card {
       height: 250px;
@@ -314,5 +314,3 @@ main {
     }
   }
 }
- 
- 

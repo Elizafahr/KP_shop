@@ -6,6 +6,7 @@ Object.assign(swiperEl, {
   spaceBetween: 10,
   navigation: true,
   scroll: true,
+  loop: true,
 });
 
 swiperEl.initialize();
