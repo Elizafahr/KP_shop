@@ -68,7 +68,7 @@ input::-ms-clear {
 }
 
 button,
-input[type="submit"] {
+input[type=submit] {
   display: inline-block;
   box-shadow: none;
   background-color: transparent;
@@ -244,7 +244,7 @@ main .special .card {
   min-width: 250px;
   border: none;
   margin-left: 20px;
-  max-width: 350px;
+  max-width: 300px;
 }
 main .special .image-card {
   height: 250px;
@@ -326,7 +326,7 @@ main #rewiewsContainer .links-rewiews {
   display: grid;
   grid-template-columns: auto auto;
   -moz-column-gap: 10px;
-  column-gap: 10px;
+       column-gap: 10px;
 }
 main #rewiewsContainer .links-rewiews .links-rewiew {
   background: linear-gradient(45deg, #fff, rgba(0, 106, 198, 0.1921568627));
@@ -405,13 +405,12 @@ main .angry-grid #item-5 {
   color: #fff !important;
 }
 
+.ligth {
+  color: #858c95;
+}
+
 .headerBg {
-  background: radial-gradient(
-    147.05% 147.05% at 50% 77.27%,
-    rgb(225, 230, 255) 0%,
-    rgb(226, 231, 255) 44.8958069086%,
-    rgb(165, 180, 255) 75.1041412354%
-  ) !important;
+  background: radial-gradient(147.05% 147.05% at 50% 77.27%, rgb(225, 230, 255) 0%, rgb(226, 231, 255) 44.8958069086%, rgb(165, 180, 255) 75.1041412354%) !important;
   padding: 50px 0;
 }
 .headerBg .header-content {
@@ -429,13 +428,36 @@ main .angry-grid #item-5 {
   height: 370px;
 }
 
-.about-text .left img,
-.about-text .rigth img {
+.about-text .left img, .about-text .rigth img {
   height: 250px;
   width: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   border-radius: 7px;
+}
+
+body {
+  background-color: #fff !important;
+}
+body table {
+  width: 100%;
+}
+body table tr {
+  border-bottom: 1px solid #858c95;
+}
+body table tr td {
+  padding: 5px 0 0 0;
+  padding-top: 5px !important;
+}
+body table .category {
+  padding-top: 10px;
+}
+body .product-image {
+  background-color: #f0f5fd;
+  display: flex;
+  align-items: center;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 #contact-page {
@@ -477,4 +499,4 @@ main .angry-grid #item-5 {
 }
 .contact .form-group {
   margin-bottom: 15px;
-} /*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

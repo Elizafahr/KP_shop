@@ -49,7 +49,7 @@
             <a href="#" class="nav-link link-dark px-2">Каталог</a>
           </li>
           <li class="nav-item">
-            <a href="pages/about.html" class="nav-link link-dark px-2">О нас</a>
+            <a href="about.html" class="nav-link link-dark px-2">О нас</a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link link-dark px-2">Контакты</a>
@@ -78,7 +78,7 @@
     <!-- Хедер страницы или другие общие элементы интерфейса -->
 
     <main>
-      <section class="product">
+      <!-- <section class="product">
         <div class="product-image">
           <img src="" alt="" id="productImage">
         </div>
@@ -88,7 +88,74 @@
           <h3 id="productPrice"></h3>
           <a href="#" class="btn btn-primary">Добавить в корзину</a>
         </div>
+      </section> -->
+
+     
+      <section class="product d-flex gap-4 flex-wrap">
+        <div class="product-image  col-lg-6 ">
+          <img src="" alt="" id="productImage">
+        </div>
+        <div class="product-details col-lg-6 ">
+          <h2 id="productTitle"></h2>
+
+          <div class="d-flex align-center justify-center align-items-center">
+            <h3 id="productPrice"></h3> <small class="stroked ligth" id="costLast"></small>
+          </div>
+
+          <a href="#" class="btn btn-primary">Добавить в корзину</a>
+        </div>
+
       </section>
+      <div class="descr mt-4">
+        <h3>Описание</h3>
+        <p id="productDescription"></p>
+        <hr>
+        <h2>Характеристики</h2>
+        <div id="productSpecifications">
+          <!-- Сюда будет вставлена таблица характеристик -->
+        </div>
+
+        <!-- <table>
+            <tr>
+              <td colspan="2"><b>Технические характеристики</b></td>
+            </tr>
+          <tr>
+            <td>Сезонность</td>
+            <td>2023</td>
+          </tr>
+            <tr>
+              <td colspan="2"><b>Колеса</b></td>
+            </tr>
+          <tr>
+            <td>Тип обода</td>
+            <td>Двойной</td>
+          </tr>
+          <tr>
+            <td>Материал обода</td>
+            <td>Алюминиевый сплав</td>
+          </tr>
+          <tr>
+            <td>Наименование покрышек</td>
+            <td>PULSE 20*2.125</td>
+          </tr>
+
+            <tr>
+              <td colspan="2" ><b>Вилка</b></td>
+            </tr>
+          <tr>
+            <td>Наименование вилки</td>
+            <td>PULSE</td>
+          </tr>
+          <tr>
+            <td>Конструкция вилки</td>
+            <td>Пружинно-эластомерная</td>
+          </tr>
+          <tr>
+            <td>Ход вилки, мм</td>
+            <td>80</td>
+          </tr>
+        </table> -->
+      </div>
     </main>
 
   </div>

@@ -1,81 +1,188 @@
-// import { products } from "./array/products";
-const urlParams = new URLSearchParams(window.location.search);
-const productId = urlParams.get("id");
-console.log(productId);
+const urlParams = new URLSearchParams(window.location.search)
+const productId = urlParams.get('id')
+console.log(productId)
 
-function loadItem() {
-    // // Предполагается, что products - это массив объектов продуктов
-
-    const products = [
-        {
-            id: "1",
-            name: "Городской велосипед PULSE диаметр 27,5”",
-            cost: 100,
-            costLast: 500,
-            description: "Рождественский колокольчик",
-            image: "/assets/img/png/scooter/scooter-06.png",
+function loadItem () {
+  // Предполагается, что products - это массив объектов продуктов
+  const products = [
+    {
+      id: '1',
+      name: 'Горный велосипед PULSE, скоростной, дисковые тормоза, 20", SHIMANO, 2023',
+      cost: 11800,
+      costLast: 18000,
+      description:
+        'Горный велосипед с колесами диаметром 20 дюймов идеально подходит для подростков мальчиков и девочек с ростом от 100 до 130 см. Этот велосипед отличный выбор для катания как в парке, так и по пересеченной местности. Он оснащен трансмиссией Shimano, что гарантирует плавное и эффективное передвижение. Механические дисковые тормоза обеспечивают надежное и безопасное торможение, а передняя амортизационная вилка добавляет комфорта и сглаживает неровности дороги для более приятного катания.',
+      image: '/assets/img/png/scooter/scooter-06.png',
+      category: ['bicycle', 'mountain', 'adult'],
+      specifications: {
+        'Технические характеристики': {
+          'Cезонность': '2023'
         },
-        {
-            id: "2",
-            name: "Горный велосипед KMS диаметр 26”",
-            cost: 4400,
-            costLast: 500,
-            description: "Шапка Санты Клауса",
-            image: "/assets/img/png/scooter/scooter-02.png",
+        'Колеса': {
+          'Тип обода': 'Двойной',
+          'Материал обода': 'Алюминиевый сплав',
+          'Наименование покрышек': 'PULSE 20*2.125'
         },
-        {
-            id: "3",
-            name: "Самокат трюковой KMS TRICK, дека 48 см",
-            cost: 5422,
-            costLast: 500,
-            description: "Рождественские подарки",
-            image: "/assets/img/png/scooter/scooter-02.png",
+        'Вилка': {
+          'Наименование вилки': 'PULSE',
+          'Конструкция вилки': 'Пружинно-эластомерная',
+          'Ход вилки, мм': '80'
+        }
+      }
+    },
+    {
+      id: '2',
+      name: 'Горный велосипед KMS диаметр 26”',
+      cost: 4400,
+      costLast: 500,
+      description:
+        'Горный велосипед с колесами диаметром 20 дюймов идеально подходит для подростков мальчиков и девочек с ростом от 100 до 130 см. Этот велосипед отличный выбор для катания как в парке, так и по пересеченной местности. Он оснащен трансмиссией Shimano, что гарантирует плавное и эффективное передвижение. Механические дисковые тормоза обеспечивают надежное и безопасное торможение, а передняя амортизационная вилка добавляет комфорта и сглаживает неровности дороги для более приятного катания.',
+      image: '/assets/img/png/scooter/scooter-02.png',
+      category: ['bicycle', 'mountain', 'adult'],
+      specifications: {
+        technical: {
+          сезонность: '2023'
         },
-        {
-            id: "4",
-            name: "Городской велосипед PULSE диаметр 27,5”",
-            cost: 4500,
-            costLast: 500,
-            description: "Рождественский колокольчик",
-            image: "/assets/img/png/scooter/scooter-03.png",
+        wheels: {
+          'Тип обода': 'Двойной',
+          'Материал обода': 'Алюминиевый сплав',
+          'Наименование покрышек': 'PULSE 20*2.125'
         },
-        {
-            id: "5",
-            name: "Городской велосипед PULSE диаметр 27,5”",
-            cost: 2000,
-            costLast: 500,
-            description: "Шапка Санты Клауса",
-            image: "/assets/img/png/scooter/scooter-04.png",
+        Fork: {
+          'Наименование вилки	': 'PULSE',
+          'Конструкция вилки': 'Пружинно-эластомерная',
+          'Ход вилки, мм': '80'
+        }
+      }
+    },
+    {
+      id: '3',
+      name: 'Самокат трюковой KMS TRICK, дека 48 см',
+      cost: 5422,
+      costLast: 500,
+      description:
+        'Горный велосипед с колесами диаметром 20 дюймов идеально подходит для подростков мальчиков и девочек с ростом от 100 до 130 см. Этот велосипед отличный выбор для катания как в парке, так и по пересеченной местности. Он оснащен трансмиссией Shimano, что гарантирует плавное и эффективное передвижение. Механические дисковые тормоза обеспечивают надежное и безопасное торможение, а передняя амортизационная вилка добавляет комфорта и сглаживает неровности дороги для более приятного катания.',
+      image: '/assets/img/png/scooter/scooter-02.png',
+      category: ['scooter', 'stunt', 'adult']
+    },
+    {
+      id: '4',
+      name: 'Городской велосипед PULSE диаметр 27,5”',
+      cost: 4500,
+      costLast: 500,
+      description:
+        'Горный велосипед с колесами диаметром 20 дюймов идеально подходит для подростков мальчиков и девочек с ростом от 100 до 130 см. Этот велосипед отличный выбор для катания как в парке, так и по пересеченной местности. Он оснащен трансмиссией Shimano, что гарантирует плавное и эффективное передвижение. Механические дисковые тормоза обеспечивают надежное и безопасное торможение, а передняя амортизационная вилка добавляет комфорта и сглаживает неровности дороги для более приятного катания.',
+      image: '/assets/img/png/scooter/scooter-03.png',
+      category: ['bicycle', 'city', 'adult'],
+      specifications: {
+        technical: {
+          сезонность: '2023'
         },
-        {
-            id: "6",
-            name: "Горный велосипед KMS диаметр 26”",
-            cost: 26000,
-            costLast: 500,
-            description: "Рождественские подарки",
-            image: "/assets/img/png/scooter/scooter-05.png",
+        wheels: {
+          'Тип обода': 'Двойной',
+          'Материал обода': 'Алюминиевый сплав',
+          'Наименование покрышек': 'PULSE 20*2.125'
         },
-    ];
-
-    const product = products.find((item) => item.id === productId);
-
-    if (product) {
-        console.log(product);
-
-        document.getElementById("productImage").src = product.image;
-        console.log(product.image);
-
-        document.getElementById("productTitle").textContent = product.name;
-        document.getElementById("productDescription").textContent =
-            product.description;
-        console.log(product.description);
-
-        document.getElementById(
-            "productPrice"
-        ).textContent = `Цена: ${product.cost} руб.`;
-    } else {
-        console.log("Продукт не найден");
+        Fork: {
+          'Наименование вилки	': 'PULSE',
+          'Конструкция вилки': 'Пружинно-эластомерная',
+          'Ход вилки, мм': '80'
+        }
+      }
+    },
+    {
+      id: '5',
+      name: 'Городской велосипед PULSE диаметр 27,5”',
+      cost: 2000,
+      costLast: 500,
+      description:
+        'Горный велосипед с колесами диаметром 20 дюймов идеально подходит для подростков мальчиков и девочек с ростом от 100 до 130 см. Этот велосипед отличный выбор для катания как в парке, так и по пересеченной местности. Он оснащен трансмиссией Shimano, что гарантирует плавное и эффективное передвижение. Механические дисковые тормоза обеспечивают надежное и безопасное торможение, а передняя амортизационная вилка добавляет комфорта и сглаживает неровности дороги для более приятного катания.',
+      image: '/assets/img/png/scooter/scooter-04.png',
+      category: ['bicycle', 'city', 'adult'],
+      specifications: {
+        technical: {
+          сезонность: '2023'
+        },
+        wheels: {
+          'Тип обода': 'Двойной',
+          'Материал обода': 'Алюминиевый сплав',
+          'Наименование покрышек': 'PULSE 20*2.125'
+        },
+        Fork: {
+          'Наименование вилки	': 'PULSE',
+          'Конструкция вилки': 'Пружинно-эластомерная',
+          'Ход вилки, мм': '80'
+        }
+      }
+    },
+    {
+      id: '6',
+      name: 'Горный детский велосипед KMS диаметр 26”',
+      cost: 26000,
+      costLast: 500,
+      description:
+        'Горный велосипед с колесами диаметром 20 дюймов идеально подходит для подростков мальчиков и девочек с ростом от 100 до 130 см. Этот велосипед отличный выбор для катания как в парке, так и по пересеченной местности. Он оснащен трансмиссией Shimano, что гарантирует плавное и эффективное передвижение. Механические дисковые тормоза обеспечивают надежное и безопасное торможение, а передняя амортизационная вилка добавляет комфорта и сглаживает неровности дороги для более приятного катания.',
+      image: '/assets/img/png/scooter/scooter-05.png',
+      category: ['scooter', 'mountain', 'child'],
+      specifications: {
+        technical: {
+          сезонность: '2023'
+        },
+        wheels: {
+          'Тип обода': 'Двойной',
+          'Материал обода': 'Алюминиевый сплав',
+          'Наименование покрышек': 'PULSE 20*2.125'
+        },
+        Fork: {
+          'Наименование вилки	': 'PULSE',
+          'Конструкция вилки': 'Пружинно-эластомерная',
+          'Ход вилки, мм': '80'
+        }
+      }
     }
+  ]
+
+  const product = products.find(item => item.id === productId)
+
+  if (product) {
+    console.log(product)
+
+    document.getElementById('productImage').src = product.image
+
+    document.getElementById('productTitle').textContent = product.name
+    document.getElementById('productDescription').textContent =
+      product.description
+    console.log(product.description)
+
+    document.getElementById(
+      'productPrice'
+    ).textContent = `Цена: ${product.cost} руб.`
+    document.getElementById('costLast').textContent = `${product.costLast} руб.`
+    
+    // Генерация таблицы характеристик
+    const specificationsHTML = generateTable(product.specifications)
+    document.getElementById('productSpecifications').innerHTML =
+      specificationsHTML
+  } else {
+    console.log('Продукт не найден')
+  }
 }
 
-loadItem();
+function generateTable (specs) {
+  let tableHTML = '<table>'
+ 
+  for (const category in specs) {
+    tableHTML += `<tr><td colspan="2"  class=" category"><b>${category}</b></td></tr>`
+    const subSpecs = specs[category]
+    for (const key in subSpecs) {
+      tableHTML += `<tr><td class="ligth">${key}</td><td>${subSpecs[key]}</td></tr>`
+    }
+  }
+
+  tableHTML += '</table>'
+  return tableHTML
+}
+
+// const specificationsHTML = generateTable(bicycle.specifications)
+
+loadItem()
