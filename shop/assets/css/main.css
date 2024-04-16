@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap')
 @charset "UTF-8";
 /* Reset and base styles  */
 * {
@@ -564,6 +565,7 @@ table tr:not(:first-child) {
 }
 details {
    transition: .3s ease all;
+   margin-bottom: 24px;
    
 }
 summary {
@@ -583,6 +585,21 @@ details[open] summary {
    
 }
 
+.orders_table_header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 24px;
+   border: 1px solid #E5E5E7;
+   border-radius: 10px;
+   margin-bottom: 24px;
+}
+
+.orders_table_header_item {
+   font-size: 18px;
+   font-family: "Mulish", sans-serif;
+   font-weight: 400;
+}
 .details_description {
    padding: 0px 40px;
 }
