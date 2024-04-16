@@ -582,3 +582,14 @@ details[open] summary {
    align-items: center;
    
 }
+
+.details_description {
+   padding: 0px 40px;
+}
+.details_image {
+   background-color: #F0F5FD;
+}
+/* fixed size from design */
+.details_image  { 
+   width: 128px;
+}
