@@ -290,7 +290,7 @@ main {
     }
   }
 }
-.accordion {
+.accordion-sec {
   display: grid;
   grid-template-columns: 49% 49%;
   gap: 30px;
@@ -314,6 +314,6 @@ main {
     }
   }
 }
-.ligth{
+.ligth {
   color: $grey;
 }
