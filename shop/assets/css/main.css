@@ -562,3 +562,23 @@ body .product-image {
 table tr:not(:first-child) {
   display: none;
 }
+details {
+   transition: .3s ease all;
+   
+}
+summary {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   
+}
+details[open] summary {
+   margin-bottom: 24px;
+}
+
+.details_content {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   
+}
