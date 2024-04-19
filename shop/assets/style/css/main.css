@@ -383,7 +383,7 @@ main .angry-grid #item-5 {
   grid-column: 1/2;
 }
 
-.accordion {
+.accordion-sec {
   display: grid;
   grid-template-columns: 49% 49%;
   gap: 30px;
@@ -407,6 +407,10 @@ main .angry-grid #item-5 {
 }
 .footer a:hover {
   color: #fff !important;
+}
+
+.ligth {
+  color: #858c95;
 }
 
 .headerBg {
@@ -434,6 +438,31 @@ main .angry-grid #item-5 {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 7px;
+}
+
+body {
+  background-color: #fff !important;
+}
+body table {
+  width: 100%;
+}
+body table tr {
+  border-bottom: 1px solid #858c95;
+}
+body table tr td {
+  padding: 5px 0 0 0;
+  padding-top: 5px !important;
+}
+body table .category {
+  padding-top: 10px;
+}
+body .product-image {
+  background-color: #f0f5fd;
+  display: flex;
+  align-items: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 #contact-page {
