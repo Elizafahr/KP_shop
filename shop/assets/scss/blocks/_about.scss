@@ -1,0 +1,33 @@
+.headerBg {
+  background: radial-gradient(
+    147.05% 147.05% at 50% 77.27%,
+    rgb(225, 230, 255) 0%,
+    rgb(226, 231, 255) 44.89580690860748%,
+    rgb(165, 180, 255) 75.10414123535156%
+  ) !important;
+  padding: 50px 0;
+  .header-content {
+    background: none;
+    .box {
+        padding: 50px 0 !important;
+       
+        position: relative;
+      #aboutHeaderBicycle {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 550px;
+        height: 370px;
+      }
+    }
+  }
+}
+
+.about-text {
+    .left img, .rigth img{
+        height: 250px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 7px;
+    }
+}

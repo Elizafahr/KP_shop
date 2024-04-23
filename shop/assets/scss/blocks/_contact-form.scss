@@ -1,0 +1,28 @@
+ 
+.contact {
+    background-color: $white;
+    padding: 15px;
+    border: 1px solid $ligth-grey;
+    border-radius: 15px;
+    .map {
+      background-image: url("/assets/img/png/map.png");
+      background-size: cover;
+      border-radius: 15px;
+      position: relative;
+      min-height: 350px;
+  
+      .low {
+        background-color: $white;
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        margin: 10px;
+        padding: 15px;
+        border-radius: 5px;
+      }
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+  }
+  

@@ -1,0 +1,43 @@
+{
+    "security.workspace.trust.untrustedFiles": "open",
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "workbench.iconTheme": "vscode-icons",
+    "liveSassCompile.settings.formats": [
+    
+        
+
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "assets/css",
+            "savePathReplacementPairs": null
+        }
+    ],
+    "liveServer.settings.donotShowInfoMsg": true,
+    "workbench.colorTheme": "Debug is coming",
+    "git.suggestSmartCommit": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.linkedEditing": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "numso.prettier-standard-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    "git.autofetch": true,
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "liveSassCompile.settings.forceBaseDirectory": "",
+    "window.zoomLevel": -2,
+    "files.autoSave": "afterDelay",
+    "[php]": {
+        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+    },
+    "htmlScss.globalStyles": null
+}
