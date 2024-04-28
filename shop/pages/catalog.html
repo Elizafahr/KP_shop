@@ -10,6 +10,14 @@
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
   <!--основные стили-->
   <link rel="stylesheet" href="../assets/css/main.css">
+
+  <style>
+    #items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
+      gap: 15px;
+    }
+  </style>
 </head>
 
 <body>
@@ -77,7 +85,73 @@
   <div class="container">
 
     <main>
+      <div class="row">
+        <aside class="col-lg-3">
 
+          <div class="d-flex flex-column gap-2">
+            <article class="filter-group">
+
+              <div class="filter-content collapse show" id="collapse_1" style="">
+                <div class="card-body">
+                  <h5>Категории</h5>
+                  <ul class="list-menu">
+                    <li><a class="active" href="#">Велосипеды </a></li>
+                    <li><a href="#">Самокаты </a></li>
+                    <li><a href="#">Скейтбординг </a></li>
+                    <li><a href="#">Аксессуары </a></li>
+                  </ul>
+
+                </div> <!-- card-body.// -->
+              </div>
+            </article> <!-- filter-group  .// -->
+            <article class="filter-group">
+
+              <div class="filter-content collapse show" id="collapse_2">
+                <div class="card-body">
+                  <h5>Бренды</h5>
+                  <label class="custom-control custom-checkbox">
+                    <input type="checkbox" checked="" class="custom-control-input">
+                    <div class="custom-control-label">BLACKOUT
+                    </div>
+                  </label>
+                  <label class="custom-control custom-checkbox ">
+                    <input type="checkbox" checked="" class="custom-control-input">
+                    <div class="custom-control-label">SCENERIDE
+
+                    </div>
+                  </label>
+
+                </div> <!-- card-body.// -->
+              </div>
+            </article> <!-- filter-group .// -->
+            <article class="filter-group">
+
+              <div class="filter-content collapse show" id="collapse_3" style="">
+                <div class="card-body">
+                  <h5>Цена</h5>
+                  <div class="form-row d-flex gap-1">
+                    <div class="form-group col-md-6">
+                      <input class="form-control" placeholder="от" type="number">
+                    </div>
+                    <div class="form-group text-right col-md-6">
+                      <input class="form-control" placeholder="до" type="number">
+                    </div>
+                  </div> <!-- form-row.// -->
+                  <div class="d-flex row gap-1 mt-2">
+                    <button class="btn   btn-primary w-100" id="apply">Показать</button>
+                    <button class="btn   btn-primary w-100" id="reset">Сбросить</button>
+                  </div>
+                </div><!-- card-body.// -->
+              </div>
+            </article> <!-- filter-group .// -->
+
+
+          </div> <!-- card.// -->
+
+        </aside>
+
+        <div id="items" class=" col-lg-9"> </div>
+      </div>
     </main>
 
   </div>
@@ -138,6 +212,285 @@
     </div>
   </div>
 
+
+
+
+  <script>
+    const itemsCatalog = document.querySelector("#itemsCatalog");
+    let out = "";
+    const products = [
+      {
+        id: "0",
+        name: 'Горный велосипед PULSE, скоростной, дисковые тормоза, 20", SHIMANO, 2023',
+        cost: 11800,
+        costLast: 18000,
+        description:
+          "Горный велосипед с колесами диаметром 20 дюймов идеально подходит для подростков мальчиков и девочек с ростом от 100 до 130 см. Этот велосипед отличный выбор для катания как в парке, так и по пересеченной местности. Он оснащен трансмиссией Shimano, что гарантирует плавное и эффективное передвижение. Механические дисковые тормоза обеспечивают надежное и безопасное торможение, а передняя амортизационная вилка добавляет комфорта и сглаживает неровности дороги для более приятного катания.",
+        image: "/assets/img/png/scooter/scooter-06.png",
+        category: ["bicycle", "mountain", "adult"],
+        specifications: {
+          "Технические характеристики": {
+            Cезонность: "2023",
+          },
+          Колеса: {
+            "Тип обода": "Двойной",
+            "Материал обода": "Алюминиевый сплав",
+            "Наименование покрышек": "PULSE 20*2.125",
+          },
+          Вилка: {
+            "Наименование вилки": "PULSE",
+            "Конструкция вилки": "Пружинно-эластомерная",
+            "Ход вилки, мм": "80",
+          },
+        },
+      },
+      {
+        id: "1",
+        name: 'Горный велосипед PULSE, скоростной, дисковые тормоза, 20", SHIMANO, 2023',
+        cost: 11800,
+        costLast: 18000,
+        description:
+          "Горный велосипед с колесами диаметром 20 дюймов идеально подходит для подростков мальчиков и девочек с ростом от 100 до 130 см. Этот велосипед отличный выбор для катания как в парке, так и по пересеченной местности. Он оснащен трансмиссией Shimano, что гарантирует плавное и эффективное передвижение. Механические дисковые тормоза обеспечивают надежное и безопасное торможение, а передняя амортизационная вилка добавляет комфорта и сглаживает неровности дороги для более приятного катания.",
+        image: "/assets/img/png/scooter/scooter-06.png",
+        category: ["bicycle", "mountain", "adult"],
+        specifications: {
+          "Технические характеристики": {
+            Cезонность: "2023",
+          },
+          Колеса: {
+            "Тип обода": "Двойной",
+            "Материал обода": "Алюминиевый сплав",
+            "Наименование покрышек": "PULSE 20*2.125",
+          },
+          Вилка: {
+            "Наименование вилки": "PULSE",
+            "Конструкция вилки": "Пружинно-эластомерная",
+            "Ход вилки, мм": "80",
+          },
+        },
+      },
+      {
+        id: "2",
+        name: "Горный велосипед KMS диаметр 26”",
+        cost: 4400,
+        costLast: 500,
+        brand: 'BLACKOUT', description:
+          "Горный велосипед с колесами диаметром 20 дюймов идеально подходит для подростков мальчиков и девочек с ростом от 100 до 130 см. Этот велосипед отличный выбор для катания как в парке, так и по пересеченной местности. Он оснащен трансмиссией Shimano, что гарантирует плавное и эффективное передвижение. Механические дисковые тормоза обеспечивают надежное и безопасное торможение, а передняя амортизационная вилка добавляет комфорта и сглаживает неровности дороги для более приятного катания.",
+        image: "/assets/img/png/scooter/scooter-02.png",
+        category: ["bicycle", "mountain", "adult"],
+        specifications: {
+          "Технические характеристики": {
+            Cезонность: "2023",
+          },
+          Колеса: {
+            "Тип обода": "Двойной",
+            "Материал обода": "Алюминиевый сплав",
+            "Наименование покрышек": "PULSE 20*2.125",
+          },
+          Вилка: {
+            "Наименование вилки": "PULSE",
+            "Конструкция вилки": "Пружинно-эластомерная",
+            "Ход вилки, мм": "80",
+          },
+        },
+      },
+      {
+        id: "3",
+        name: "Самокат трюковой KMS TRICK, дека 48 см",
+        cost: 5422,
+        costLast: 500,
+        brand: 'BLACKOUT', description:
+          "Горный велосипед с колесами диаметром 20 дюймов идеально подходит для подростков мальчиков и девочек с ростом от 100 до 130 см. Этот велосипед отличный выбор для катания как в парке, так и по пересеченной местности. Он оснащен трансмиссией Shimano, что гарантирует плавное и эффективное передвижение. Механические дисковые тормоза обеспечивают надежное и безопасное торможение, а передняя амортизационная вилка добавляет комфорта и сглаживает неровности дороги для более приятного катания.",
+        image: "/assets/img/png/scooter/scooter-02.png",
+        category: ["scooter", "stunt", "adult"],
+      },
+      {
+        id: "4",
+        name: "Городской велосипед PULSE диаметр 27,5”",
+        cost: 4500,
+        costLast: 500,
+        brand: 'BLACKOUT', description:
+          "Горный велосипед с колесами диаметром 20 дюймов идеально подходит для подростков мальчиков и девочек с ростом от 100 до 130 см. Этот велосипед отличный выбор для катания как в парке, так и по пересеченной местности. Он оснащен трансмиссией Shimano, что гарантирует плавное и эффективное передвижение. Механические дисковые тормоза обеспечивают надежное и безопасное торможение, а передняя амортизационная вилка добавляет комфорта и сглаживает неровности дороги для более приятного катания.",
+        image: "/assets/img/png/scooter/scooter-03.png",
+        category: ["bicycle", "city", "adult"],
+        specifications: {
+          "Технические характеристики": {
+            Cезонность: "2023",
+          },
+          Колеса: {
+            "Тип обода": "Двойной",
+            "Материал обода": "Алюминиевый сплав",
+            "Наименование покрышек": "PULSE 20*2.125",
+          },
+          Вилка: {
+            "Наименование вилки": "PULSE",
+            "Конструкция вилки": "Пружинно-эластомерная",
+            "Ход вилки, мм": "80",
+          },
+        },
+      },
+      {
+        id: "5",
+        name: "Городской велосипед PULSE диаметр 27,5”",
+        cost: 2000,
+        costLast: 500,
+        brand: 'BLACKOUT',
+        description:
+          "Горный велосипед с колесами диаметром 20 дюймов идеально подходит для подростков мальчиков и девочек с ростом от 100 до 130 см. Этот велосипед отличный выбор для катания как в парке, так и по пересеченной местности. Он оснащен трансмиссией Shimano, что гарантирует плавное и эффективное передвижение. Механические дисковые тормоза обеспечивают надежное и безопасное торможение, а передняя амортизационная вилка добавляет комфорта и сглаживает неровности дороги для более приятного катания.",
+        image: "/assets/img/png/scooter/scooter-04.png",
+        category: ["bicycle", "city", "adult"],
+        specifications: {
+          "Технические характеристики": {
+            Cезонность: "2023",
+          },
+          Колеса: {
+            "Тип обода": "Двойной",
+            "Материал обода": "Алюминиевый сплав",
+            "Наименование покрышек": "PULSE 20*2.125",
+          },
+          Вилка: {
+            "Наименование вилки": "PULSE",
+            "Конструкция вилки": "Пружинно-эластомерная",
+            "Ход вилки, мм": "80",
+          },
+        },
+      },
+      {
+        id: "6",
+        name: "Горный детский велосипед KMS диаметр 26”",
+        cost: 26000,
+        costLast: 500,
+        brand: 'BLACKOUT', description:
+          "Горный велосипед с колесами диаметром 20 дюймов идеально подходит для подростков мальчиков и девочек с ростом от 100 до 130 см. Этот велосипед отличный выбор для катания как в парке, так и по пересеченной местности. Он оснащен трансмиссией Shimano, что гарантирует плавное и эффективное передвижение. Механические дисковые тормоза обеспечивают надежное и безопасное торможение, а передняя амортизационная вилка добавляет комфорта и сглаживает неровности дороги для более приятного катания.",
+        image: "/assets/img/png/scooter/scooter-05.png",
+        category: ["scooter", "mountain", "child"],
+        specifications: {
+          "Технические характеристики": {
+            Cезонность: "2023",
+          },
+          Колеса: {
+            "Тип обода": "Двойной",
+            "Материал обода": "Алюминиевый сплав",
+            "Наименование покрышек": "PULSE 20*2.125",
+          },
+          Вилка: {
+            "Наименование вилки": "PULSE",
+            "Конструкция вилки": "Пружинно-эластомерная",
+            "Ход вилки, мм": "80",
+          },
+        },
+      },
+    ];
+    // Перебираем массив продуктов
+    for (const key in products) {
+      const data = products[key];
+      out += `
+        <div class="card data-category="${data.category}" data-brand="${data.brand}" data-price="${data.cost}">
+        <div class="image-card">
+            <img class="card-img-top" src="${data.image}" alt="">
+        </div>
+        <div class="card-body ">
+            <div class="d-flex align-items-center gap-2">
+            <h5 class="card-title blue">${data.cost}₽</h5>
+            <h5 class="card-title  small ligth stroked lastPrice">${data.costLast}₽</h5>
+            </div>
+            <p class="card-text">${data.name}</p>
+            
+            <a href="product.html?id=${key}" class="btn btn-primary">Выбрать</a>
+        </div>
+        </div>
+    `;
+    }
+
+    document.querySelector("#items").innerHTML = out;
+    // Инициализация переменных для хранения выбранных параметров фильтрации
+    let selectedCategory = '';
+    let selectedBrands = [];
+    let priceRange = { min: 0, max: Infinity };
+
+    // Функция для обновления фильтров
+    function updateFilters() {
+      // Получение выбранных категорий
+      const categories = document.querySelectorAll('.list-menu a');
+      categories.forEach(category => {
+        if (category.classList.contains('active')) {
+          selectedCategory = category.textContent.trim();
+        }
+      });
+
+      // Получение выбранных брендов
+      const brands = document.querySelectorAll('.custom-control-input');
+      selectedBrands = [];
+      brands.forEach(brand => {
+        if (brand.checked) {
+          selectedBrands.push(brand.nextElementSibling.textContent.trim());
+        }
+      });
+
+      // Получение диапазона цен
+      const minPriceInput = document.querySelector('input[placeholder="от"]');
+      const maxPriceInput = document.querySelector('input[placeholder="до"]');
+      priceRange.min = minPriceInput.value ? parseInt(minPriceInput.value) : 0;
+      priceRange.max = maxPriceInput.value ? parseInt(maxPriceInput.value) : Infinity;
+    }
+
+    // Функция для фильтрации продуктов
+    function filterProducts() {
+      updateFilters();
+      let filteredProducts = products.filter(product => {
+        // Проверка категории
+        if (selectedCategory && !product.category.includes(selectedCategory)) {
+          return false;
+        }
+        // Проверка бренда
+        if (selectedBrands.length > 0 && !selectedBrands.includes(product.brand)) {
+          return false;
+        }
+        // Проверка цены
+        if (product.cost < priceRange.min || product.cost > priceRange.max) {
+          return false;
+        }
+        return true;
+      });
+
+      // Обновление отображения продуктов
+      let out = '';
+      filteredProducts.forEach(product => {
+        out += `
+      <div class="card data-category="${product.category}" data-brand="${product.brand}" data-price="${product.cost}">
+        <div class="image-card">
+          <img class="card-img-top" src="${product.image}" alt="">
+        </div>
+        <div class="card-body ">
+          <div class="d-flex align-items-center gap-2">
+            <h5 class="card-title blue">${product.cost}₽</h5>
+            <h5 class="card-title small ligth stroked lastPrice">${product.costLast}₽</h5>
+          </div>
+          <p class="card-text">${product.name}</p>
+          <a href="product.html?id=${product.id}" class="btn btn-primary">Выбрать</a>
+        </div>
+      </div>
+    `;
+      });
+
+      document.querySelector("#items").innerHTML = out;
+    }
+
+    // Обработчики событий для кнопок "Показать" и "Сбросить"
+    document.querySelector('#apply').addEventListener('click', filterProducts);
+    document.querySelector('#reset').addEventListener('click', () => {
+      // Сброс выбранных параметров фильтрации
+      selectedCategory = '';
+      selectedBrands = [];
+      priceRange = { min: 0, max: Infinity };
+      // Сброс значений ввода
+      document.querySelector('input[placeholder="от"]').value = '';
+      document.querySelector('input[placeholder="до"]').value = '';
+      // Применение фильтрации без выбранных параметров
+      filterProducts();
+    });
+
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -158,7 +511,7 @@
   <script src="../js/generate/array/products.js"></script>
 
 
-  <script src="../js/generate/single-product.js"></script>
+  <script src="../js/generate/output/goods.js"></script>
 </body>
 
 </html>

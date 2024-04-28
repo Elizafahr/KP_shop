@@ -2,6 +2,5 @@
 $("document").ready(function () {
   outRewiews();
   outSpecial();
+  outGoods();
 });
-
-

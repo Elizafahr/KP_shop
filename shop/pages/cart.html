@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--botstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <!--основные стили-->
+    <link rel="stylesheet" href="../assets/css/main.css">
+
+</head>
+
+<body>
+    <div class="header-container">
+        <!--Блок с шапкой-->
+        <header class="mb-3 box">
+            <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr">
+                <div class="">
+                    <a href="#" class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-dark text-decoration-none"
+                        aria-expanded="false">
+                        <img width="140" height="35" src="assets/img/svg/Sportify.svg" alt="Sportify" />
+                    </a>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                    <form class="w-75 me-3">
+                        <input type="search" class="form-control" placeholder="Input search query..."
+                            aria-label="Search" />
+                    </form>
+
+                    <div class="flex-shrink-0 location-header">
+                        <img src="assets/img/svg/icons/icon-location.svg" alt="location" width="20" height="20"
+                            class="rounded-circle" />
+                        <span>Екатеринбург</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--Блок с шапкой-->
+        <header class="box">
+            <div class="d-flex flex-wrap">
+                <ul class="nav me-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link link-dark px-2 active" aria-current="page">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/catalog.html" class="nav-link link-dark px-2">Каталог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/about.html" class="nav-link link-dark px-2">О нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link link-dark px-2">Контакты</a>
+                    </li>
+                </ul>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="pages/cart.html" class="nav-link link-dark px-2"><img height="20"
+                                src="assets/img/png/icons/cart.png" alt="" /></a>
+                    </li>
+                    <!-- <li class="nav-item">
+                <a href="pages/profile.html" class="nav-link link-dark px-2"><img height="20"
+                    src="assets/img/png/icons/icon-user.png" alt="" /></a>
+              </li> -->
+                    <li class="nav-item">
+                        <a href="pages/logIn.html" class="nav-link link-dark px-2"><img height="20"
+                                src="assets/img/png/icons/icon-user.png" alt="" /></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link link-dark px-2"><img height="20"
+                                src="assets/img/png/icons/icon-phone.png" alt="" /></a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+    </div>
+
+    <main>
+        <h2>Корзина</h2>
+        <div class="row">
+            <div class="col-lg-7 col-md-12 d-flex flex-column gap-3" id="cartItems">
+
+
+            </div>
+            <div class="col-lg-4" id="cartInfo">
+
+            </div>
+        </div>
+    </main>
+    <!--Блок футер-->
+    <div class="footer">
+        <img src="../assets/img/png/footer-header.png" alt="" />
+        <div class="footer-full">
+            <footer class="box padd-50">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <h5>Каталог</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2">
+                                <a href="#" class="nav-link p-0 text-muted">Велосипеды</a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a href="#" class="nav-link p-0 text-muted">Самокаты</a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a href="#" class="nav-link p-0 text-muted">Скейтборды</a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a href="#" class="nav-link p-0 text-muted">Аксессуары</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <h5>Покупателям</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2">
+                                <a href="#" class="nav-link p-0 text-muted">Где купить</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <h5>Связаться с нами</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2">
+                                <a class="nav-link p-0 text-muted" href="tel:88005553535">+7-800-555-35-35</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-2">
+                        <h5>Связаться с нами</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2">
+                                <a href="#" class="nav-link p-0 text-muted">Какойто город, ул какая то, дом 80
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="text-center">© 2024 Elizafahr. Все права защищены.</p>
+            </footer>
+        </div>
+    </div>
+
+
+    <script>
+        const cartItems = [
+            {
+                id: "0",
+                name: 'Горный велосипед PULSE, скоростной, дисковые тормоза, 20", SHIMANO, 2023',
+                cost: 11800,
+                costLast: 18000,
+                quantity: 1,
+
+                description:
+                    "Горный велосипед с колесами диаметром 20 дюймов идеально подходит для подростков мальчиков и девочек с ростом от 100 до 130 см. Этот велосипед отличный выбор для катания как в парке, так и по пересеченной местности. Он оснащен трансмиссией Shimano, что гарантирует плавное и эффективное передвижение. Механические дисковые тормоза обеспечивают надежное и безопасное торможение, а передняя амортизационная вилка добавляет комфорта и сглаживает неровности дороги для более приятного катания.",
+                image: "/assets/img/png/scooter/scooter-06.png",
+
+            },
+            {
+                id: "1",
+                name: 'Горный велосипед PULSE, скоростной, дисковые тормоза, 20", SHIMANO, 2023',
+                cost: 11800,
+                costLast: 18000,
+                quantity: 1,
+                description:
+                    "Горный велосипед с колесами диаметром 20 дюймов идеально подходит для подростков мальчиков и девочек с ростом от 100 до 130 см. Этот велосипед отличный выбор для катания как в парке, так и по пересеченной местности. Он оснащен трансмиссией Shimano, что гарантирует плавное и эффективное передвижение. Механические дисковые тормоза обеспечивают надежное и безопасное торможение, а передняя амортизационная вилка добавляет комфорта и сглаживает неровности дороги для более приятного катания.",
+                image: "/assets/img/png/scooter/scooter-06.png",
+
+            },
+            {
+                id: "2",
+                name: "Горный велосипед KMS диаметр 26”",
+                cost: 4400,
+                costLast: 500,
+                brand: 'BLACKOUT', description:
+                    "Горный велосипед с колесами диаметром 20 дюймов идеально подходит для подростков мальчиков и девочек с ростом от 100 до 130 см. Этот велосипед отличный выбор для катания как в парке, так и по пересеченной местности. Он оснащен трансмиссией Shimano, что гарантирует плавное и эффективное передвижение. Механические дисковые тормоза обеспечивают надежное и безопасное торможение, а передняя амортизационная вилка добавляет комфорта и сглаживает неровности дороги для более приятного катания.",
+                image: "/assets/img/png/scooter/scooter-02.png",
+
+            },
+            {
+                id: "3",
+                name: "Самокат трюковой KMS TRICK, дека 48 см",
+                cost: 5422,
+                costLast: 500,
+                brand: 'BLACKOUT', description:
+                    "Горный велосипед с колесами диаметром 20 дюймов идеально подходит для подростков мальчиков и девочек с ростом от 100 до 130 см. Этот велосипед отличный выбор для катания как в парке, так и по пересеченной местности. Он оснащен трансмиссией Shimano, что гарантирует плавное и эффективное передвижение. Механические дисковые тормоза обеспечивают надежное и безопасное торможение, а передняя амортизационная вилка добавляет комфорта и сглаживает неровности дороги для более приятного катания.",
+                image: "/assets/img/png/scooter/scooter-02.png",
+                category: ["scooter", "stunt", "adult"],
+            },
+            {
+                id: "4",
+                name: "Городской велосипед PULSE диаметр 27,5”",
+                cost: 4500,
+                costLast: 500,
+                brand: 'BLACKOUT', description:
+                    "Горный велосипед с колесами диаметром 20 дюймов идеально подходит для подростков мальчиков и девочек с ростом от 100 до 130 см. Этот велосипед отличный выбор для катания как в парке, так и по пересеченной местности. Он оснащен трансмиссией Shimano, что гарантирует плавное и эффективное передвижение. Механические дисковые тормоза обеспечивают надежное и безопасное торможение, а передняя амортизационная вилка добавляет комфорта и сглаживает неровности дороги для более приятного катания.",
+                image: "/assets/img/png/scooter/scooter-03.png",
+                category: ["bicycle", "city", "adult"],
+                specifications: {
+                    "Технические характеристики": {
+                        Cезонность: "2023",
+                    },
+                    Колеса: {
+                        "Тип обода": "Двойной",
+                        "Материал обода": "Алюминиевый сплав",
+                        "Наименование покрышек": "PULSE 20*2.125",
+                    },
+                    Вилка: {
+                        "Наименование вилки": "PULSE",
+                        "Конструкция вилки": "Пружинно-эластомерная",
+                        "Ход вилки, мм": "80",
+                    },
+                },
+            },
+            {
+                id: "5",
+                name: "Городской велосипед PULSE диаметр 27,5”",
+                cost: 2000,
+                costLast: 500,
+                brand: 'BLACKOUT',
+                quantity: 1,
+                description:
+                    "Горный велосипед с колесами диаметром 20 дюймов идеально подходит для подростков мальчиков и девочек с ростом от 100 до 130 см. Этот велосипед отличный выбор для катания как в парке, так и по пересеченной местности. Он оснащен трансмиссией Shimano, что гарантирует плавное и эффективное передвижение. Механические дисковые тормоза обеспечивают надежное и безопасное торможение, а передняя амортизационная вилка добавляет комфорта и сглаживает неровности дороги для более приятного катания.",
+                image: "/assets/img/png/scooter/scooter-04.png",
+                category: ["bicycle", "city", "adult"],
+                specifications: {
+                    "Технические характеристики": {
+                        Cезонность: "2023",
+                    },
+                    Колеса: {
+                        "Тип обода": "Двойной",
+                        "Материал обода": "Алюминиевый сплав",
+                        "Наименование покрышек": "PULSE 20*2.125",
+                    },
+                    Вилка: {
+                        "Наименование вилки": "PULSE",
+                        "Конструкция вилки": "Пружинно-эластомерная",
+                        "Ход вилки, мм": "80",
+                    },
+                },
+            },
+            {
+                id: "6",
+                name: "Горный детский велосипед KMS диаметр 26”",
+                cost: 26000,
+                costLast: 500,
+                brand: 'BLACKOUT', description:
+                    "Горный велосипед с колесами диаметром 20 дюймов идеально подходит для подростков мальчиков и девочек с ростом от 100 до 130 см. Этот велосипед отличный выбор для катания как в парке, так и по пересеченной местности. Он оснащен трансмиссией Shimano, что гарантирует плавное и эффективное передвижение. Механические дисковые тормоза обеспечивают надежное и безопасное торможение, а передняя амортизационная вилка добавляет комфорта и сглаживает неровности дороги для более приятного катания.",
+                image: "/assets/img/png/scooter/scooter-05.png",
+                category: ["scooter", "mountain", "child"],
+                specifications: {
+                    "Технические характеристики": {
+                        Cезонность: "2023",
+                    },
+                    Колеса: {
+                        "Тип обода": "Двойной",
+                        "Материал обода": "Алюминиевый сплав",
+                        "Наименование покрышек": "PULSE 20*2.125",
+                    },
+                    Вилка: {
+                        "Наименование вилки": "PULSE",
+                        "Конструкция вилки": "Пружинно-эластомерная",
+                        "Ход вилки, мм": "80",
+                    },
+                },
+            },
+        ];
+
+
+        let out = "";
+        for (const key in cartItems) {
+            const data = cartItems[key];
+            out += ` <div class="d-flex row gap-2 align-items-center">
+                <div class="cart-item-image col-lg-2"  style="heigth: 100px !important; width: 100px !important;">
+                    <img class="card-img-top" src="${data.image}" alt="">
+                </div>
+                <div class="descr col-lg-4">
+                    <p class="card-text">${data.name}</p>
+                </div>
+                <div class="price col-lg-1">
+                    <h6 class="card-title  small ligth stroked lastPrice">${data.costLast}₽</h6>
+                </div>
+                <div class="quantity d-flex col-lg-3 align-items-center">
+                    <input style="border: 1px solid grey; width: 25px  !important;"  type="button" value="+">
+                    <input type="number" style="border: 1px solid grey; max-heigth: max-content !important; height: max-content;">
+                    <input style="border: 1px solid grey;  width: 25px  !important;" type="button" value="-">
+                </div>
+                <div class="del col-lg-1">
+                    <input  type="button" value="del">
+                </div>
+            </div>
+            `;
+        }
+        document.querySelector("#cartItems").innerHTML = out;
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <!-- <script src="jquery-3.7.1.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+
+
+    <!--СКРИПТЫ С МАССИВАМИ-->
+    <script src="../js/generate/array/rewiews.js"></script>
+    <script src="../js/generate/array/products.js"></script>
+
+
+    <script src="../js/generate/output/goods.js"></script>
+</body>
+
+</html>
