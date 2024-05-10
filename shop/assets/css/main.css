@@ -272,7 +272,6 @@ main .special .card {
   margin-left: 20px;
   max-width: 300px;
   border: none;
-
 }
 
 .image-card {
@@ -483,10 +482,12 @@ main .angry-grid #item-5 {
 }
 
 .headerBg {
-  background: radial-gradient(147.05% 147.05% at 50% 77.27%,
-      rgb(225, 230, 255) 0%,
-      rgb(226, 231, 255) 44.8958069086%,
-      rgb(165, 180, 255) 75.1041412354%) !important;
+  background: radial-gradient(
+    147.05% 147.05% at 50% 77.27%,
+    rgb(225, 230, 255) 0%,
+    rgb(226, 231, 255) 44.8958069086%,
+    rgb(165, 180, 255) 75.1041412354%
+  ) !important;
   padding: 50px 0;
 }
 
@@ -699,7 +700,6 @@ details[open] summary {
 }
 
 .orders_table_header {
-
   display: grid;
   grid-template-columns: 30% 33% 33%;
   align-items: center;
@@ -725,14 +725,12 @@ details[open] summary {
   width: 128px;
 }
 
-
 #loginAuthPage {
   background-image: url("/assets/img/png/bg-mountain.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
   /* height: 100vh; */
-
 }
 
 #loginAuthPage .footer {
@@ -746,12 +744,10 @@ details[open] summary {
   border-radius: 10px;
   background-color: white;
   border: 1px solid #f8f9fb;
-
 }
 
 .nav-tabs .nav-link {
   color: #000;
-
 }
 
 .nav-tabs .nav-item.show .nav-link,
@@ -759,7 +755,6 @@ details[open] summary {
   color: #0069c6;
 
   border: none;
-
 }
 
 .nav-tabs {
@@ -807,7 +802,139 @@ details[open] summary {
   align-content: center !important;
 }
 
-
 .cart-item-image img {
   object-fit: cover;
+}
+
+/* .accordion-button{
+  text-transform:initial;
+  color: #0069c6;
+} 
+ <div class="image-card">
+            <img class="card-img-top" src="${product.image}" alt="">
+        </div>
+        
+        
+        */
+
+.categCard .image-card {
+  padding: 15px;
+}
+
+.categCard .image-card img {
+  object-fit: scale-down;
+}
+
+.input-group {
+  display: flex !important;
+  flex-wrap: nowrap;
+  width: max-content;
+  height: 30px;
+}
+.input-group * {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  min-width: max-content;
+  width: 40px !important;
+}
+.input-group .btn {
+  width: 40px !important;
+  padding: 0px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.input-group input {
+  width: 60px !important;
+}
+
+.cartItem {
+  position: relative;
+  border-bottom: 1px solid #cacaca;
+  padding: 20px 0;
+}
+.del {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.del .btn {
+  padding: 0px !important;
+  height: 30px;
+  align-items: center;
+  width: 30px !important;
+  border: 1px solid gray;
+  border-radius: 100%;
+  color: gray;
+}
+
+.cartItem .costLast {
+  width: 80px;
+}
+.cartItem .img-cartItem {
+  background-color: #f0f5fd;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-content: center !important;
+}
+.cartItem .img-cartItem img {
+  max-height: 150px;
+}
+
+.order, .delivery, .payWay {
+  border: 1px solid #d2d2d2;
+  border-radius: 20px;
+  padding: 30px; 
+}
+.order-top{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.order-info{
+  display: flex;
+  flex-direction: column;
+ }
+.order-bottom{
+  padding-top: 20px;
+  border-top:1PX solid #d2d2d2 ;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.res{
+  font-weight: 400;
+font-size: 24px;
+}
+
+.orderForm .row, .col-lg-6 { 
+  
+  padding-right: 0 !important;
+
+  padding-left:  0 !important;
+  
+}
+
+.inputCheckbox{
+  background:  #006ac60e;
+  border: 1px solid  #006ac691;
+  border-radius: 4px;
+  color: #000;
+  padding-top: 15px ;
+  padding-bottom: 15px ; 
+  width: 100%;
+  margin-top: 5px;
+
+}
+
+.inputCheckbox *{
+   
+  color: #000;
+}
+  .form-check {
+   
+  padding-left: 2.5em !important; 
 }

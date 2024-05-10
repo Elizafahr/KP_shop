@@ -1,4 +1,107 @@
 @charset "UTF-8";
+/* Reset and base styles  */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+.box {
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
 /*база*/
 body {
   font-family: "Roboto", sans-serif;
@@ -9,7 +112,6 @@ body {
 }
 
 .btn {
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   padding: 10px 30px;
@@ -43,7 +145,6 @@ a:hover {
 }
 
 /* main-container */
-.box,
 .angry-grid {
   max-width: 1140px;
   padding: 0 15px;
@@ -138,12 +239,12 @@ main .special .btn-primary {
   background-color: var(--main);
 }
 main .special .card {
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   min-width: 250px;
   border: none;
   margin-left: 20px;
+  max-width: 300px;
 }
 main .special .image-card {
   height: 250px;
@@ -211,14 +312,12 @@ main #rewiewsContainer {
   background-color: #dbe9ff;
 }
 main #rewiewsContainer .rewiews swiper-container {
-  height: -webkit-max-content !important;
   height: -moz-max-content !important;
   height: max-content !important;
 }
 main #rewiewsContainer .rewiews .review {
   background-color: #fff;
   padding: 30px;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   border-radius: 15px;
@@ -280,7 +379,7 @@ main .angry-grid #item-5 {
   grid-column: 1/2;
 }
 
-.accordion {
+.accordion-sec {
   display: grid;
   grid-template-columns: 49% 49%;
   gap: 30px;
@@ -306,6 +405,87 @@ main .angry-grid #item-5 {
   color: #fff !important;
 }
 
+.ligth {
+  color: #858c95;
+}
+
+.accordion-button {
+  text-transform: capitalize;
+  color: #0069c6;
+}
+
+.headerBg {
+  background: radial-gradient(147.05% 147.05% at 50% 77.27%, rgb(225, 230, 255) 0%, rgb(226, 231, 255) 44.8958069086%, rgb(165, 180, 255) 75.1041412354%) !important;
+  padding: 50px 0;
+}
+.headerBg .header-content {
+  background: none;
+}
+.headerBg .header-content .box {
+  padding: 50px 0 !important;
+  position: relative;
+}
+.headerBg .header-content .box #aboutHeaderBicycle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 550px;
+  height: 370px;
+}
+
+.about-text .left img, .about-text .rigth img {
+  height: 250px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 7px;
+}
+
+body {
+  background-color: #fff !important;
+}
+body table {
+  width: 100%;
+}
+body table tr {
+  border-bottom: 1px solid #858c95;
+}
+body table tr td {
+  padding: 5px 0 0 0;
+  padding-top: 5px !important;
+}
+body table .category {
+  padding-top: 10px;
+}
+body .product-image {
+  background-color: #f0f5fd;
+  display: flex;
+  align-items: center;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+#contact-page {
+  background-color: #fff !important;
+}
+#contact-page #contact {
+  background-image: url("/assets/img/png/bg-mountain.png");
+  background-size: cover;
+  padding-top: 0 !important;
+  padding-bottom: 220px !important;
+  margin-bottom: -220px;
+  background-position: top center;
+}
+#contact-page .footer {
+  background-color: transparent;
+}
+
+.contact {
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #e5e5e7;
+  border-radius: 15px;
+}
 .contact .map {
   background-image: url("/assets/img/png/map.png");
   background-size: cover;
@@ -324,8 +504,4 @@ main .angry-grid #item-5 {
 }
 .contact .form-group {
   margin-bottom: 15px;
-}
-
-span {
-  color: #0069c6;
 }/*# sourceMappingURL=main.css.map */

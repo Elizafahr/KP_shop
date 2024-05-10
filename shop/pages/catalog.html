@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <!--botstrap-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
   <!--основные стили-->
-  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/main.css" />
 
   <style>
     #items {
@@ -25,7 +25,7 @@
   <div class="header-container">
     <!--Блок с шапкой-->
     <header class="mb-3 box">
-      <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr">
+      <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr;">
         <div class="">
           <a href="#" class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-dark text-decoration-none"
             aria-expanded="false">
@@ -51,109 +51,115 @@
       <div class="d-flex flex-wrap">
         <ul class="nav me-auto">
           <li class="nav-item">
-            <a href="#" class="nav-link link-dark px-2 active" aria-current="page">Главная</a>
+            <a href="/index.html" class="nav-link link-dark px-2 active" aria-current="page">Главная</a>
           </li>
           <li class="nav-item">
-            <a href="../index.html" class="nav-link link-dark px-2">Каталог</a>
+            <a href="catalog.html" class="nav-link link-dark px-2">Каталог</a>
           </li>
           <li class="nav-item">
             <a href="about.html" class="nav-link link-dark px-2">О нас</a>
           </li>
           <li class="nav-item">
-            <a href="contact.html" class="nav-link link-dark px-2">Контакты</a>
+            <a href="#contact" class="nav-link link-dark px-2">Контакты</a>
           </li>
         </ul>
         <ul class="nav">
           <li class="nav-item">
-            <a href="cart.html" class="nav-link link-dark px-2"><img height="20" src="assets/img/png/icons/cart.png"
+            <a href="cart.html" class="nav-link link-dark px-2"><img height="20" src="/assets/img/png/icons/cart.png"
                 alt="" /></a>
           </li>
           <li class="nav-item">
             <a href="profile.html" class="nav-link link-dark px-2"><img height="20"
-                src="assets/img/png/icons/icon-user.png" alt="" /></a>
+                src="/assets/img/png/icons/icon-user.png" alt="" /></a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link link-dark px-2"><img height="20" src="assets/img/png/icons/icon-phone.png"
+            <a href="#" class="nav-link link-dark px-2"><img height="20" src="/assets/img/png/icons/icon-phone.png"
                 alt="" /></a>
           </li>
         </ul>
       </div>
     </header>
-
   </div>
 
   <div class="container">
-
     <main>
       <div class="row">
         <aside class="col-lg-3">
-
           <div class="d-flex flex-column gap-2">
             <article class="filter-group">
-
               <div class="filter-content collapse show" id="collapse_1" style="">
                 <div class="card-body">
                   <h5>Категории</h5>
                   <ul class="list-menu">
-                    <li><a class="active" href="#">Велосипеды </a></li>
-                    <li><a href="#">Самокаты </a></li>
-                    <li><a href="#">Скейтбординг </a></li>
-                    <li><a href="#">Аксессуары </a></li>
+                    <li>
+                      <a id="allCateg" class="active" href="#" onclick="filterByCategory('Все')">Все</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="filterByCategory('Велосипеды')">Велосипеды</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="filterByCategory('Самокаты')">Самокаты</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="filterByCategory('Скейтбординг')">Скейтбординг</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="filterByCategory('Аксессуары')">Аксессуары</a>
+                    </li>
                   </ul>
-
-                </div> <!-- card-body.// -->
+                </div>
               </div>
-            </article> <!-- filter-group  .// -->
+            </article>
+            <!-- filter-group  .// -->
             <article class="filter-group">
-
               <div class="filter-content collapse show" id="collapse_2">
                 <div class="card-body">
                   <h5>Бренды</h5>
-                  <label class="custom-control custom-checkbox">
-                    <input type="checkbox" checked="" class="custom-control-input">
-                    <div class="custom-control-label">BLACKOUT
-                    </div>
-                  </label>
-                  <label class="custom-control custom-checkbox ">
-                    <input type="checkbox" checked="" class="custom-control-input">
-                    <div class="custom-control-label">SCENERIDE
-
-                    </div>
-                  </label>
-
-                </div> <!-- card-body.// -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="BLACKOUT" id="brandBlackout" checked />
+                    <label class="form-check-label" for="brandBlackout">BLACKOUT</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="SCENERIDE" id="brandSceneride" checked />
+                    <label class="form-check-label" for="brandSceneride">SCENERIDE</label>
+                  </div>
+                </div>
               </div>
-            </article> <!-- filter-group .// -->
+            </article>
+            <!-- filter-group .// -->
             <article class="filter-group">
-
               <div class="filter-content collapse show" id="collapse_3" style="">
                 <div class="card-body">
                   <h5>Цена</h5>
                   <div class="form-row d-flex gap-1">
                     <div class="form-group col-md-6">
-                      <input class="form-control" placeholder="от" type="number">
+                      <input id="minPrice" class="form-control" placeholder="от" type="number" value="0" />
                     </div>
                     <div class="form-group text-right col-md-6">
-                      <input class="form-control" placeholder="до" type="number">
+                      <input id="maxPrice" class="form-control" placeholder="до" type="number" value="29000" />
                     </div>
-                  </div> <!-- form-row.// -->
-                  <div class="d-flex row gap-1 mt-2">
-                    <button class="btn   btn-primary w-100" id="apply">Показать</button>
-                    <button class="btn   btn-primary w-100" id="reset">Сбросить</button>
                   </div>
-                </div><!-- card-body.// -->
+                  <!-- form-row.// -->
+                  <div class="d-flex row gap-1 mt-2">
+                    <button class="btn btn-primary w-100" id="apply">
+                      Показать
+                    </button>
+                    <button class="btn btn-primary w-100" id="reset">
+                      Сбросить
+                    </button>
+                  </div>
+                </div>
+                <!-- card-body.// -->
               </div>
-            </article> <!-- filter-group .// -->
-
-
-          </div> <!-- card.// -->
-
+            </article>
+            <!-- filter-group .// -->
+          </div>
+          <!-- card.// -->
         </aside>
 
-        <div id="items" class=" col-lg-9"> </div>
+        <div id="items" class="col-lg-9"></div>
       </div>
     </main>
-
   </div>
   <!--Блок футер-->
   <div class="footer">
@@ -165,16 +171,16 @@
             <h5>Каталог</h5>
             <ul class="nav flex-column">
               <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">Велосипеды</a>
+                <a href="#" class="nav-link p-0 text-muted" onclick=" вfilterByCategory('Велосипеды')">Велосипеды</a>
               </li>
               <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">Самокаты</a>
+                <a href="#" class="nav-link p-0 text-muted" onclick="filtвerByCategory('Самокаты')">Самокаты</a>
               </li>
               <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">Скейтборды</a>
+                <a href="#" class="nav-link p-0 text-muted" onclick="fiвlterByCategory('Скейтбординг')">Скейтборды</a>
               </li>
               <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">Аксессуары</a>
+                <a href="#" class="nav-link p-0 text-muted" onclick="fiвlterByCategory('Аксессуары')">Аксессуары</a>
               </li>
             </ul>
           </div>
@@ -212,285 +218,7 @@
     </div>
   </div>
 
-
-
-
-  <script>
-    const itemsCatalog = document.querySelector("#itemsCatalog");
-    let out = "";
-    const products = [
-      {
-        id: "0",
-        name: 'Горный велосипед PULSE, скоростной, дисковые тормоза, 20", SHIMANO, 2023',
-        cost: 11800,
-        costLast: 18000,
-        description:
-          "Горный велосипед с колесами диаметром 20 дюймов идеально подходит для подростков мальчиков и девочек с ростом от 100 до 130 см. Этот велосипед отличный выбор для катания как в парке, так и по пересеченной местности. Он оснащен трансмиссией Shimano, что гарантирует плавное и эффективное передвижение. Механические дисковые тормоза обеспечивают надежное и безопасное торможение, а передняя амортизационная вилка добавляет комфорта и сглаживает неровности дороги для более приятного катания.",
-        image: "/assets/img/png/scooter/scooter-06.png",
-        category: ["bicycle", "mountain", "adult"],
-        specifications: {
-          "Технические характеристики": {
-            Cезонность: "2023",
-          },
-          Колеса: {
-            "Тип обода": "Двойной",
-            "Материал обода": "Алюминиевый сплав",
-            "Наименование покрышек": "PULSE 20*2.125",
-          },
-          Вилка: {
-            "Наименование вилки": "PULSE",
-            "Конструкция вилки": "Пружинно-эластомерная",
-            "Ход вилки, мм": "80",
-          },
-        },
-      },
-      {
-        id: "1",
-        name: 'Горный велосипед PULSE, скоростной, дисковые тормоза, 20", SHIMANO, 2023',
-        cost: 11800,
-        costLast: 18000,
-        description:
-          "Горный велосипед с колесами диаметром 20 дюймов идеально подходит для подростков мальчиков и девочек с ростом от 100 до 130 см. Этот велосипед отличный выбор для катания как в парке, так и по пересеченной местности. Он оснащен трансмиссией Shimano, что гарантирует плавное и эффективное передвижение. Механические дисковые тормоза обеспечивают надежное и безопасное торможение, а передняя амортизационная вилка добавляет комфорта и сглаживает неровности дороги для более приятного катания.",
-        image: "/assets/img/png/scooter/scooter-06.png",
-        category: ["bicycle", "mountain", "adult"],
-        specifications: {
-          "Технические характеристики": {
-            Cезонность: "2023",
-          },
-          Колеса: {
-            "Тип обода": "Двойной",
-            "Материал обода": "Алюминиевый сплав",
-            "Наименование покрышек": "PULSE 20*2.125",
-          },
-          Вилка: {
-            "Наименование вилки": "PULSE",
-            "Конструкция вилки": "Пружинно-эластомерная",
-            "Ход вилки, мм": "80",
-          },
-        },
-      },
-      {
-        id: "2",
-        name: "Горный велосипед KMS диаметр 26”",
-        cost: 4400,
-        costLast: 500,
-        brand: 'BLACKOUT', description:
-          "Горный велосипед с колесами диаметром 20 дюймов идеально подходит для подростков мальчиков и девочек с ростом от 100 до 130 см. Этот велосипед отличный выбор для катания как в парке, так и по пересеченной местности. Он оснащен трансмиссией Shimano, что гарантирует плавное и эффективное передвижение. Механические дисковые тормоза обеспечивают надежное и безопасное торможение, а передняя амортизационная вилка добавляет комфорта и сглаживает неровности дороги для более приятного катания.",
-        image: "/assets/img/png/scooter/scooter-02.png",
-        category: ["bicycle", "mountain", "adult"],
-        specifications: {
-          "Технические характеристики": {
-            Cезонность: "2023",
-          },
-          Колеса: {
-            "Тип обода": "Двойной",
-            "Материал обода": "Алюминиевый сплав",
-            "Наименование покрышек": "PULSE 20*2.125",
-          },
-          Вилка: {
-            "Наименование вилки": "PULSE",
-            "Конструкция вилки": "Пружинно-эластомерная",
-            "Ход вилки, мм": "80",
-          },
-        },
-      },
-      {
-        id: "3",
-        name: "Самокат трюковой KMS TRICK, дека 48 см",
-        cost: 5422,
-        costLast: 500,
-        brand: 'BLACKOUT', description:
-          "Горный велосипед с колесами диаметром 20 дюймов идеально подходит для подростков мальчиков и девочек с ростом от 100 до 130 см. Этот велосипед отличный выбор для катания как в парке, так и по пересеченной местности. Он оснащен трансмиссией Shimano, что гарантирует плавное и эффективное передвижение. Механические дисковые тормоза обеспечивают надежное и безопасное торможение, а передняя амортизационная вилка добавляет комфорта и сглаживает неровности дороги для более приятного катания.",
-        image: "/assets/img/png/scooter/scooter-02.png",
-        category: ["scooter", "stunt", "adult"],
-      },
-      {
-        id: "4",
-        name: "Городской велосипед PULSE диаметр 27,5”",
-        cost: 4500,
-        costLast: 500,
-        brand: 'BLACKOUT', description:
-          "Горный велосипед с колесами диаметром 20 дюймов идеально подходит для подростков мальчиков и девочек с ростом от 100 до 130 см. Этот велосипед отличный выбор для катания как в парке, так и по пересеченной местности. Он оснащен трансмиссией Shimano, что гарантирует плавное и эффективное передвижение. Механические дисковые тормоза обеспечивают надежное и безопасное торможение, а передняя амортизационная вилка добавляет комфорта и сглаживает неровности дороги для более приятного катания.",
-        image: "/assets/img/png/scooter/scooter-03.png",
-        category: ["bicycle", "city", "adult"],
-        specifications: {
-          "Технические характеристики": {
-            Cезонность: "2023",
-          },
-          Колеса: {
-            "Тип обода": "Двойной",
-            "Материал обода": "Алюминиевый сплав",
-            "Наименование покрышек": "PULSE 20*2.125",
-          },
-          Вилка: {
-            "Наименование вилки": "PULSE",
-            "Конструкция вилки": "Пружинно-эластомерная",
-            "Ход вилки, мм": "80",
-          },
-        },
-      },
-      {
-        id: "5",
-        name: "Городской велосипед PULSE диаметр 27,5”",
-        cost: 2000,
-        costLast: 500,
-        brand: 'BLACKOUT',
-        description:
-          "Горный велосипед с колесами диаметром 20 дюймов идеально подходит для подростков мальчиков и девочек с ростом от 100 до 130 см. Этот велосипед отличный выбор для катания как в парке, так и по пересеченной местности. Он оснащен трансмиссией Shimano, что гарантирует плавное и эффективное передвижение. Механические дисковые тормоза обеспечивают надежное и безопасное торможение, а передняя амортизационная вилка добавляет комфорта и сглаживает неровности дороги для более приятного катания.",
-        image: "/assets/img/png/scooter/scooter-04.png",
-        category: ["bicycle", "city", "adult"],
-        specifications: {
-          "Технические характеристики": {
-            Cезонность: "2023",
-          },
-          Колеса: {
-            "Тип обода": "Двойной",
-            "Материал обода": "Алюминиевый сплав",
-            "Наименование покрышек": "PULSE 20*2.125",
-          },
-          Вилка: {
-            "Наименование вилки": "PULSE",
-            "Конструкция вилки": "Пружинно-эластомерная",
-            "Ход вилки, мм": "80",
-          },
-        },
-      },
-      {
-        id: "6",
-        name: "Горный детский велосипед KMS диаметр 26”",
-        cost: 26000,
-        costLast: 500,
-        brand: 'BLACKOUT', description:
-          "Горный велосипед с колесами диаметром 20 дюймов идеально подходит для подростков мальчиков и девочек с ростом от 100 до 130 см. Этот велосипед отличный выбор для катания как в парке, так и по пересеченной местности. Он оснащен трансмиссией Shimano, что гарантирует плавное и эффективное передвижение. Механические дисковые тормоза обеспечивают надежное и безопасное торможение, а передняя амортизационная вилка добавляет комфорта и сглаживает неровности дороги для более приятного катания.",
-        image: "/assets/img/png/scooter/scooter-05.png",
-        category: ["scooter", "mountain", "child"],
-        specifications: {
-          "Технические характеристики": {
-            Cезонность: "2023",
-          },
-          Колеса: {
-            "Тип обода": "Двойной",
-            "Материал обода": "Алюминиевый сплав",
-            "Наименование покрышек": "PULSE 20*2.125",
-          },
-          Вилка: {
-            "Наименование вилки": "PULSE",
-            "Конструкция вилки": "Пружинно-эластомерная",
-            "Ход вилки, мм": "80",
-          },
-        },
-      },
-    ];
-    // Перебираем массив продуктов
-    for (const key in products) {
-      const data = products[key];
-      out += `
-        <div class="card data-category="${data.category}" data-brand="${data.brand}" data-price="${data.cost}">
-        <div class="image-card">
-            <img class="card-img-top" src="${data.image}" alt="">
-        </div>
-        <div class="card-body ">
-            <div class="d-flex align-items-center gap-2">
-            <h5 class="card-title blue">${data.cost}₽</h5>
-            <h5 class="card-title  small ligth stroked lastPrice">${data.costLast}₽</h5>
-            </div>
-            <p class="card-text">${data.name}</p>
-            
-            <a href="product.html?id=${key}" class="btn btn-primary">Выбрать</a>
-        </div>
-        </div>
-    `;
-    }
-
-    document.querySelector("#items").innerHTML = out;
-    // Инициализация переменных для хранения выбранных параметров фильтрации
-    let selectedCategory = '';
-    let selectedBrands = [];
-    let priceRange = { min: 0, max: Infinity };
-
-    // Функция для обновления фильтров
-    function updateFilters() {
-      // Получение выбранных категорий
-      const categories = document.querySelectorAll('.list-menu a');
-      categories.forEach(category => {
-        if (category.classList.contains('active')) {
-          selectedCategory = category.textContent.trim();
-        }
-      });
-
-      // Получение выбранных брендов
-      const brands = document.querySelectorAll('.custom-control-input');
-      selectedBrands = [];
-      brands.forEach(brand => {
-        if (brand.checked) {
-          selectedBrands.push(brand.nextElementSibling.textContent.trim());
-        }
-      });
-
-      // Получение диапазона цен
-      const minPriceInput = document.querySelector('input[placeholder="от"]');
-      const maxPriceInput = document.querySelector('input[placeholder="до"]');
-      priceRange.min = minPriceInput.value ? parseInt(minPriceInput.value) : 0;
-      priceRange.max = maxPriceInput.value ? parseInt(maxPriceInput.value) : Infinity;
-    }
-
-    // Функция для фильтрации продуктов
-    function filterProducts() {
-      updateFilters();
-      let filteredProducts = products.filter(product => {
-        // Проверка категории
-        if (selectedCategory && !product.category.includes(selectedCategory)) {
-          return false;
-        }
-        // Проверка бренда
-        if (selectedBrands.length > 0 && !selectedBrands.includes(product.brand)) {
-          return false;
-        }
-        // Проверка цены
-        if (product.cost < priceRange.min || product.cost > priceRange.max) {
-          return false;
-        }
-        return true;
-      });
-
-      // Обновление отображения продуктов
-      let out = '';
-      filteredProducts.forEach(product => {
-        out += `
-      <div class="card data-category="${product.category}" data-brand="${product.brand}" data-price="${product.cost}">
-        <div class="image-card">
-          <img class="card-img-top" src="${product.image}" alt="">
-        </div>
-        <div class="card-body ">
-          <div class="d-flex align-items-center gap-2">
-            <h5 class="card-title blue">${product.cost}₽</h5>
-            <h5 class="card-title small ligth stroked lastPrice">${product.costLast}₽</h5>
-          </div>
-          <p class="card-text">${product.name}</p>
-          <a href="product.html?id=${product.id}" class="btn btn-primary">Выбрать</a>
-        </div>
-      </div>
-    `;
-      });
-
-      document.querySelector("#items").innerHTML = out;
-    }
-
-    // Обработчики событий для кнопок "Показать" и "Сбросить"
-    document.querySelector('#apply').addEventListener('click', filterProducts);
-    document.querySelector('#reset').addEventListener('click', () => {
-      // Сброс выбранных параметров фильтрации
-      selectedCategory = '';
-      selectedBrands = [];
-      priceRange = { min: 0, max: Infinity };
-      // Сброс значений ввода
-      document.querySelector('input[placeholder="от"]').value = '';
-      document.querySelector('input[placeholder="до"]').value = '';
-      // Применение фильтрации без выбранных параметров
-      filterProducts();
-    });
-
-  </script>
+  <script src="../js/catalog.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -503,13 +231,9 @@
   <!-- <script src="jquery-3.7.1.min.js"></script> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-
-
-
   <!--СКРИПТЫ С МАССИВАМИ-->
   <script src="../js/generate/array/rewiews.js"></script>
   <script src="../js/generate/array/products.js"></script>
-
 
   <script src="../js/generate/output/goods.js"></script>
 </body>
