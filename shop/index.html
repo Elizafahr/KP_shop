@@ -81,8 +81,8 @@
     </header>
     <!--Блок с контентом на главном экране-->
     <div class="header-content">
-      <div class="box padd-50 d-flex d-lg-8">
-        <div class="left-area w-100">
+      <div class="box padd-50 d-flex flex-wrap  ">
+        <div class="left-area d-lg-3 d-md-6 ">
           <div class="title w-100 d-flex flex-column">
             <h1 class="d-flex align-self-lg-start">Свобода движения,</h1>
             <h1 class="d-flex align-self-lg-end">радость открытий!</h1>
@@ -90,7 +90,7 @@
           <p class="subtitle">Большой выбор велосипедов от Вело Юг</p>
           <button class="btn btn-blue">Перейти в каталог</button>
         </div>
-        <img src="assets/img/png/Велик 1 блок.png" alt="" />
+        <img class="d-lg-8" src="assets/img/png/Велик 1 блок.png" alt="" />
       </div>
     </div>
   </div>
@@ -191,10 +191,10 @@
         </swiper-container>
       </div>
       <!--Блок с ссылками на гугл и яндекс отзывы-->
-      <div class="links-rewiews mt-3 d-flex box">
+      <div class="links-rewiews mt-3  box">
         <div class="links-rewiew d-flex flex-column">
           <img src="assets/img/png/ya_maps____ 1.png" width="165" alt="" />
-          <div class="bottom-rewiew d-flex justify-content-between align-content-center align-items-center">
+          <div class="bottom-rewiew d-flex justify-content-between align-content-center align-items-center flex-wrap">
             <span>4.8</span>
             <div class="raiting">
               <div class="stars">
@@ -211,7 +211,7 @@
         </div>
         <div class="links-rewiew d-flex flex-column">
           <img src="assets/img/png/google.png" width="165" alt="" />
-          <div class="bottom-rewiew d-flex justify-content-between align-content-center align-items-center">
+          <div class="bottom-rewiew d-flex justify-content-between align-content-center align-items-center flex-wrap"> 
             <span>4.8</span>
             <div class="raiting">
               <div class="stars">
@@ -233,7 +233,7 @@
     <section id="contact" class="contact_box padd-50">
       <div class="box">
         <h2 class="mb-4">Где купить? <span>Екатеринбург</span></h2>
-        <div class="contact d-flex row">
+        <div class="contact d-flex row gap-3">
           <div class="map col-lg-5" style="background-color: aliceblue">
             <div class="low row">
               <div class="column-1 col-lg-6">
@@ -373,25 +373,25 @@
     <div class="footer-full">
       <footer class="box padd-50">
         <div class="row">
-          <div class="col-lg-3">
+          <div class="col-lg-3  col-sm-12">
             <h5>Каталог</h5>
             <ul class="nav flex-column">
               <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">Велосипеды</a>
+                <a href="#" class="nav-link p-0 text-muted" onclick=" вfilterByCategory('Велосипеды')">Велосипеды</a>
               </li>
               <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">Самокаты</a>
+                <a href="#" class="nav-link p-0 text-muted" onclick="filtвerByCategory('Самокаты')">Самокаты</a>
               </li>
               <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">Скейтборды</a>
+                <a href="#" class="nav-link p-0 text-muted" onclick="fiвlterByCategory('Скейтбординг')">Скейтборды</a>
               </li>
               <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">Аксессуары</a>
+                <a href="#" class="nav-link p-0 text-muted" onclick="fiвlterByCategory('Аксессуары')">Аксессуары</a>
               </li>
             </ul>
           </div>
 
-          <div class="col-lg-3">
+          <div class="col-lg-3  col-sm-12">
             <h5>Покупателям</h5>
             <ul class="nav flex-column">
               <li class="nav-item mb-2">
@@ -400,7 +400,7 @@
             </ul>
           </div>
 
-          <div class="col-lg-3">
+          <div class="col-lg-3  col-sm-12">
             <h5>Связаться с нами</h5>
             <ul class="nav flex-column">
               <li class="nav-item mb-2">
@@ -409,7 +409,7 @@
             </ul>
           </div>
 
-          <div class="col-2">
+          <div class="col-lg-2 col-sm-12">
             <h5>Связаться с нами</h5>
             <ul class="nav flex-column">
               <li class="nav-item mb-2">

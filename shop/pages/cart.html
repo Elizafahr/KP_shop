@@ -51,7 +51,7 @@
             <a href="about.html" class="nav-link link-dark px-2">О нас</a>
           </li>
           <li class="nav-item">
-            <a href="#contact" class="nav-link link-dark px-2">Контакты</a>
+            <a href="contact.html" class="nav-link link-dark px-2">Контакты</a>
           </li>
         </ul>
         <ul class="nav">
@@ -75,10 +75,16 @@
   <main>
     <div class="box">
       <h2>Корзина</h2>
+       <div class="no-items" id="no-items" style="display: none;">
+            <h4>Корзина пуста! <a style="color: blue; text-decoration: underline;" href="catalog.html">Перейти к выбору товаров</a></h4>
+          </div>
       <div class="row padd-50">
-        <div class="col-lg-8 col-md-12 d-flex flex-column gap-3" id="cartItems"></div>
+        <div class="col-lg-8 col-md-12 d-flex flex-column gap-3" id="cartItems">
+         
+
+        </div>
         <div class="col-lg-4" id="cartInfo">
-          <div class="order">
+          <!-- <div class="order">
             <div class="order-top">
               <h3>Ваш заказ</h3>
               <div class="order-info">
@@ -105,7 +111,7 @@
                 Оформить заказ
               </button>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
 
@@ -115,7 +121,7 @@
         <div class=" ">
           <div class="row justify-content-between">
             <div class="col-md-7">
-              <form>
+              <form id="orderFormElement">
                 <div class="row p-0" style="margin: 0; padding: 0;">
                   <div class="mb-2 col-lg-6" style="padding-right: 5px !important;">
                     <input type="text" placeholder="Имя" class="form-control" id="name" name="name" required />
@@ -141,7 +147,7 @@
                   <label for="comment" class="form-label">Комментарий к заказу:</label>
                   <textarea class="form-control" id="comment" name="comment" rows="4"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary w-100">
+                <button id="OrderMakeBtn" type="submit" class="btn btn-primary w-100">
                   Заказать
                 </button>
               </form>
@@ -157,20 +163,18 @@
                 </div>
               </div>
 
+               
               <div class="delivery mt-2">
                 <h3>Метод доставки</h3>
-                <div class="chechContainer">
-                  <div class="form-check inputCheckbox">
-                    <input class="form-check-input" type="checkbox" value="СДЭК" id="СДЭК" checked />
-                    <label class="form-check-label" for="СДЭК">СДЭК</label>
-                  </div>
-                  <div class="form-check inputCheckbox">
-                    <input class="form-check-input" type="checkbox" value="Самовывоз" id="Самовывоз" checked />
-                    <label class="form-check-label" for="Самовывоз">Самовывоз
-                      <span><small class="ligth">
-                          Доступно в г. Екатеринбург
-                        </small></span></label>
-                  </div>
+                <div class="form-check inputCheckbox">
+                  <input class="form-check-input" type="radio" name="deliveryMethod" id="cdek" value="СДЭК" checked>
+                  <label class="form-check-label" for="cdek">СДЭК</label>
+                </div>
+                <div class="form-check inputCheckbox">
+                  <input class="form-check-input " type="radio" name="deliveryMethod" id="selfPickup" value="Самовывоз">
+                  <label class="form-check-label" for="selfPickup">Самовывоз
+                    <span><small class="light">Доступно в г. Екатеринбург</small></span>
+                  </label>
                 </div>
               </div>
             </div>
@@ -180,63 +184,62 @@
     </div>
   </main>
 
-  <!--Блок футер-->
-  <div class="footer">
-    <img src="../assets/img/png/footer-header.png" alt="" />
-    <div class="footer-full">
-      <footer class="box padd-50">
-        <div class="row">
-          <div class="col-lg-3">
-            <h5>Каталог</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">Велосипеды</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">Самокаты</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">Скейтборды</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">Аксессуары</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3">
-            <h5>Покупателям</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">Где купить</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3">
-            <h5>Связаться с нами</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2">
-                <a class="nav-link p-0 text-muted" href="tel:88005553535">+7-800-555-35-35</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-2">
-            <h5>Связаться с нами</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">Какойто город, ул какая то, дом 80
-                </a>
-              </li>
-            </ul>
-          </div>
+ <!--Блок футер-->
+ <div class="footer">
+  <img src="assets/img/png/footer-header.png" alt="" />
+  <div class="footer-full">
+    <footer class="box padd-50">
+      <div class="row">
+        <div class="col-lg-3  col-sm-12">
+          <h5>Каталог</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted" onclick=" вfilterByCategory('Велосипеды')">Велосипеды</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted" onclick="filtвerByCategory('Самокаты')">Самокаты</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted" onclick="fiвlterByCategory('Скейтбординг')">Скейтборды</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted" onclick="fiвlterByCategory('Аксессуары')">Аксессуары</a>
+            </li>
+          </ul>
         </div>
-        <p class="text-center">© 2024 Elizafahr. Все права защищены.</p>
-      </footer>
-    </div>
+
+        <div class="col-lg-3  col-sm-12">
+          <h5>Покупателям</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Где купить</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3  col-sm-12">
+          <h5>Связаться с нами</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a class="nav-link p-0 text-muted" href="tel:88005553535">+7-800-555-35-35</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-sm-12">
+          <h5>Связаться с нами</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Какойто город, ул какая то, дом 80
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-center">© 2024 Elizafahr. Все права защищены.</p>
+    </footer>
   </div>
-   
+</div>
   <script src="/js/cart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 

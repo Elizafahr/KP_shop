@@ -101,6 +101,13 @@ legend {
   max-width: 1140px;
   padding: 0 15px;
   margin: 0 auto;
+} 
+@media (max-width: 1366px) {
+  .box {
+    max-width: 90%;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
 }
 
 /*база*/
@@ -152,7 +159,13 @@ a:hover {
   padding: 0 15px;
   margin: 0 auto;
 }
-
+@media (max-width: 1366px) {
+  .angry-grid {
+    max-width: 90%;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+}
 .header-container .location-header {
   width: 163px;
   background-color: #fff;
@@ -189,6 +202,7 @@ a:hover {
   margin-bottom: -15px;
 }
 
+
 main {
   background-color: white;
 }
@@ -216,23 +230,91 @@ main #cssportal-grid #div1 {
 
 main #cssportal-grid #div2 {
   grid-area: 1/2/2/3;
-  background-image: url("/assets/img/png/category/category-03-scooter.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; background-image: url("/assets/img/png/category/category-03-scooter.png");
 }
 
 main #cssportal-grid #div3 {
-  grid-area: 1/3/2/4;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;grid-area: 1/3/2/4;
   background-image: url("/assets/img/png/category/category-04-bicycles-child.png");
 }
 
 main #cssportal-grid #div4 {
   grid-area: 2/2/3/3;
-  background-image: url("/assets/img/png/category/category-02-skate.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; background-image: url("/assets/img/png/category/category-02-skate.png");
 }
 
 main #cssportal-grid #div5 {
   grid-area: 2/3/3/4;
-  background-image: url("/assets/img/png/category/category-01-bicycles-mountain.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;  background-image: url("/assets/img/png/category/category-01-bicycles-mountain.png");
 }
+/* Стили для устройств с шириной экрана менее 677 пикселей */
+@media (max-width: 676px) {
+  
+main #cssportal-grid {
+  display: grid;
+  grid-template-columns: 2fr repeat(1, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  height: max-content;
+  background-color: #fff;
+  padding: 50px 0;
+} 
+  main #cssportal-grid #div1 {
+    grid-area: 1/1/2/3;
+ 
+    background-position: left top;
+    height: 100px;
+  }
+
+  main #cssportal-grid #div2 {
+    grid-area: 2/1/3/3;
+    height: 100px;
+    background-position: left center;
+  }
+
+  main #cssportal-grid #div3 {
+    grid-area: 3/1/4/3;
+    height: 100px;
+    background-position: left center;
+  }
+
+  main #cssportal-grid #div4 {
+    grid-area: 4/1/5/3; 
+     height: 100px;
+     background-position: left center;
+  }
+
+  main #cssportal-grid #div5 {
+    grid-area: 5/1/6/3;
+    height: 100px;
+    background-position: right center;
+  }
+}
+
+/* Стили для устройств с шириной экрана менее 380 пикселей */
+/* @media (max-width: 379px) {
+  main #cssportal-grid {
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    padding: 10px 0;
+  }
+
+  main #cssportal-grid .categ {
+    background-size: contain;
+    padding: 10px;
+  }
+} */
+
+
 
 main #cssportal-grid .categ {
   background-size: auto 100%;
@@ -241,6 +323,7 @@ main #cssportal-grid .categ {
   padding: 20px;
   border-radius: 15px;
 }
+
 
 main .special {
   background-color: white;
@@ -371,7 +454,14 @@ main #rewiewsContainer .rewiews swiper-container {
   height: -moz-max-content !important;
   height: max-content !important;
 }
-
+ 
+@media (max-width: 360px) {}
+/* @media (max-width: 677px) {
+  #mySwiperRewiews swiper-slide{ 
+    width: 80vw !important;
+  }
+} */
+@media (max-width: 1366px) {}
 main #rewiewsContainer .rewiews .review {
   background-color: #fff;
   padding: 30px;
@@ -387,6 +477,12 @@ main #rewiewsContainer .links-rewiews {
   column-gap: 10px;
 }
 
+@media (max-width: 677px) {
+  main #rewiewsContainer .links-rewiews {
+    grid-template-columns:   auto;
+    row-gap: 15px;
+  }
+}
 main #rewiewsContainer .links-rewiews .links-rewiew {
   background: linear-gradient(45deg, #fff, rgba(0, 106, 198, 0.1921568627));
   padding: 30px;
@@ -507,6 +603,25 @@ main .angry-grid #item-5 {
   width: 550px;
   height: 370px;
 }
+@media (max-width: 1006px) {
+  .headerBg .header-content .box #aboutHeaderBicycle {
+   scale: 0.8 ;
+  }
+}
+@media (max-width: 766px) {
+  .headerBg .header-content .box #aboutHeaderBicycle {
+    top: -50px;
+  }
+}
+
+@media (max-width: 466px) {
+  .headerBg .header-content .box #aboutHeaderBicycle {
+    top: 0px;
+    height: 200px;
+    width: auto;
+  }
+}
+
 
 .about-text .left img,
 .about-text .rigth img {
@@ -937,4 +1052,14 @@ font-size: 24px;
   .form-check {
    
   padding-left: 2.5em !important; 
+}
+
+
+
+@media (max-width: 360px) {}
+@media (max-width: 360px) {}
+@media (max-width: 1366px) {}
+
+.filter-group button{
+  color: white;
 }
