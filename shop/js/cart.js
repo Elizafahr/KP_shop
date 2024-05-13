@@ -1,5 +1,3 @@
- 
-
 const cartItems = [
   {
     id: "0",
@@ -35,22 +33,21 @@ const cartItems = [
   },
 ];
 
-  let totalPrice = 0;
-  let totalQuantity = 0;
+let totalPrice = 0;
+let totalQuantity = 0;
 
+//отображение товаров в карзине
 function renderCartItems() {
   const cartItemsContainer = document.getElementById("cartItems");
   cartItemsContainer.innerHTML = "";
 
   let totalPrice = 0;
-let totalQuantity = 0;
-
+  let totalQuantity = 0;
 
   cartItems.forEach((item) => {
     const cartItemElement = document.createElement("div");
     cartItemElement.dataset.id = item.id;
 
-    // Создайте HTML-структуру для каждого элемента корзины
     cartItemElement.innerHTML = `
         <div class="d-flex row align-items-center mb-3 cartItem" data-id="${item.id}">
         <div class="col-lg-3 col-md-3 img-cartItem">
@@ -78,6 +75,7 @@ let totalQuantity = 0;
 
     cartItemsContainer.appendChild(cartItemElement);
 
+    //пересчет параметров
     totalPrice += item.cost * item.quantity;
     totalQuantity += item.quantity;
 
@@ -86,6 +84,7 @@ let totalQuantity = 0;
     const quantityInput = cartItemElement.querySelector(".quantity");
     const deleteBtn = cartItemElement.querySelector(".delete-btn");
 
+    //уменьшение количества товаров
     minusBtn.addEventListener("click", () => {
       if (item.quantity > 1) {
         item.quantity--;
@@ -95,7 +94,8 @@ let totalQuantity = 0;
         renderCartInfo(totalPrice, totalQuantity);
       }
     });
-    
+
+    //увеличение количества товаров
     plusBtn.addEventListener("click", () => {
       item.quantity++;
       quantityInput.value = item.quantity;
@@ -103,7 +103,8 @@ let totalQuantity = 0;
       totalQuantity++;
       renderCartInfo(totalPrice, totalQuantity);
     });
-    
+
+    //удаление количества товаров
     deleteBtn.addEventListener("click", () => {
       const index = cartItems.findIndex((cartItem) => cartItem.id === item.id);
       totalPrice -= item.cost * item.quantity;
@@ -111,12 +112,12 @@ let totalQuantity = 0;
       cartItems.splice(index, 1);
       renderCartItems();
     });
-    
   });
 
   renderCartInfo(totalPrice, totalQuantity);
 }
 
+//данные о заказе - блок оформить заказ
 function renderCartInfo(totalPrice, totalQuantity) {
   const cartInfoElement = document.getElementById("cartInfo");
   cartInfoElement.innerHTML = `
@@ -150,94 +151,96 @@ function renderCartInfo(totalPrice, totalQuantity) {
       </div>
     </div>
   `;
-   const orderBtn = cartInfoElement.querySelector("#orderButton");
- 
-   
+  const orderBtn = cartInfoElement.querySelector("#orderButton");
 
-
-   if (totalQuantity > 0) {
+  //если корзина пустая  - убираем  блок оформления
+  if (totalQuantity > 0) {
     cartInfoElement.style.display = "block";
-    document.getElementById('no-items').style.display = "none";
+    document.getElementById("no-items").style.display = "none";
   } else {
     cartInfoElement.style.display = "none";
-    document.getElementById('no-items').style.display = "block";
-
+    document.getElementById("no-items").style.display = "block";
   }
 
-// Обработчик события для кнопки "Оформить заказ"
-orderBtn.addEventListener("click", () => {
-  orderForm.style.display = "block";
-  //cartItems.style.display = "none";
-  cartInfo.style.display = "none";
-  
-});
-
-
+  orderBtn.addEventListener("click", () => {
+    orderForm.style.display = "block";
+    //cartItems.style.display = "none";
+    cartInfo.style.display = "none";
+  });
 }
 window.addEventListener("load", renderCartItems);
 
-// Находим кнопку "Оформить заказ"
-const orderButton = document.getElementById("orderButton"); 
-// Находим элемент для отображения информации о корзине
+const orderButton = document.getElementById("orderButton");
 const cartInfo = document.getElementById("cartInfo");
- 
 const orderForm = document.getElementById("orderForm");
-
-// Исправление обработчика события для формы заказа
 const OrderMakeBtn = document.getElementById("OrderMakeBtn");
-OrderMakeBtn.addEventListener("submit", handleOrderForm);
 
-// Функция для обработки отправки формы заказа
-function handleOrderForm(event) {
-  event.preventDefault();
+// // Функция для отображения всплывающего окна с данными заказа
+// function showOrderConfirmation(total, itemCount, date) {
+//   console.log("jsiojio");
+//   // Создается HTML-код для всплывающего окна
+//   const confirmation = `
+//         <div class="modal" tabindex="-1">
+//           <div class="modal-dialog">
+//             <div class="modal-content">
+//               <div class="modal-header">
+//                 <h5 class="modal-title">Заказ оформлен</h5>
+//                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+//               </div>
+//               <div class="modal-body">
+//                 <p>Сумма: ${total} ₽</p>
+//                 <p>Количество товаров: ${itemCount}</p>
+//                 <p>Дата: ${date}</p>
+//                 <p>Спасибо за ваш заказ!</p>
+//               </div>
+//               <div class="modal-footer">
+//                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       `;
 
-  // Получаем значения из формы ( добавьте валидацию и обработку данных)
-  const formData = new FormData(event.target);
-  const name = formData.get("name");
-  const surname = formData.get("surname");
-  const email = formData.get("email");
-  const zipcode = formData.get("zipcode");
-  const city = formData.get("city");
-  const address = formData.get("address");
-  const comment = formData.get("comment");
+//   const modalElement = document.createElement("div");
+//   modalElement.innerHTML = confirmation;
+//   console.log(modalElement.innerHTML);
+//   document.body.appendChild(modalElement);
+//   console.log(document.body.contains(modalElement));
+// }
 
-  // Замените на реальные значения
-  const total = 1335; // Пример значения
-  const itemCount = 3; // Пример значения
-  const date = new Date().toLocaleDateString(); // Текущая дата
-
-  // Отображаем всплывающее окно с данными заказа
-  showOrderConfirmation(total, itemCount, date);
-}
-
-// Функция для отображения всплывающего окна с данными заказа
-function showOrderConfirmation(total, itemCount, date) {
+OrderMakeBtn.onclick = function (total, itemCount, date) {
+  console.log("jsiojio");
   // Создается HTML-код для всплывающего окна
+
   const confirmation = `
-        <div class="modal" tabindex="-1">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Заказ оформлен</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <p>Сумма: ${total} ₽</p>
-                <p>Количество товаров: ${itemCount}</p>
-                <p>Дата: ${date}</p>
-                <p>Спасибо за ваш заказ!</p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-              </div>
-            </div>
-          </div>
-        </div>
+ 
+  
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <p>Сумма: ${total} ₽</p>
+      <p>Количество товаров: ${itemCount}</p>
+      <p>Дата: ${date}</p>
+      <p>Спасибо за ваш заказ!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
       `;
 
-  // Создается новый элемент для вставки HTML-кода
   const modalElement = document.createElement("div");
   modalElement.innerHTML = confirmation;
-  // Вставляем созданный элемент в конец <body>
+  console.log(modalElement.innerHTML);
   document.body.appendChild(modalElement);
-}
+  console.log(document.body.contains(modalElement));
+};

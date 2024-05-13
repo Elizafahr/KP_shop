@@ -7,8 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const userForm = document.getElementById("userForm");
 
   // Получение данных пользователя из localStorage
-  const storedUser = JSON.parse(localStorage.getItem("user") || "{}");
-  const storedUserOld = JSON.parse(localStorage.getItem("userOld") || "{}");
+  const storedUser = JSON.parse(localStorage.getItem("user") || "{}");   
+   const storedUserOld = JSON.parse(localStorage.getItem("userOld") || "{}");
+
+
 
   // Определение, какой набор данных использовать
   let userData = storedUser; // По умолчанию используется данные 'user'
