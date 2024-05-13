@@ -36,13 +36,9 @@ const cartItems = [
 let totalPrice = 0;
 let totalQuantity = 0;
 
-//отображение товаров в карзине
 function renderCartItems() {
   const cartItemsContainer = document.getElementById("cartItems");
   cartItemsContainer.innerHTML = "";
-
-  let totalPrice = 0;
-  let totalQuantity = 0;
 
   cartItems.forEach((item) => {
     const cartItemElement = document.createElement("div");
@@ -75,7 +71,6 @@ function renderCartItems() {
 
     cartItemsContainer.appendChild(cartItemElement);
 
-    //пересчет параметров
     totalPrice += item.cost * item.quantity;
     totalQuantity += item.quantity;
 
@@ -84,7 +79,6 @@ function renderCartItems() {
     const quantityInput = cartItemElement.querySelector(".quantity");
     const deleteBtn = cartItemElement.querySelector(".delete-btn");
 
-    //уменьшение количества товаров
     minusBtn.addEventListener("click", () => {
       if (item.quantity > 1) {
         item.quantity--;
@@ -95,7 +89,6 @@ function renderCartItems() {
       }
     });
 
-    //увеличение количества товаров
     plusBtn.addEventListener("click", () => {
       item.quantity++;
       quantityInput.value = item.quantity;
@@ -104,7 +97,6 @@ function renderCartItems() {
       renderCartInfo(totalPrice, totalQuantity);
     });
 
-    //удаление количества товаров
     deleteBtn.addEventListener("click", () => {
       const index = cartItems.findIndex((cartItem) => cartItem.id === item.id);
       totalPrice -= item.cost * item.quantity;
@@ -117,7 +109,6 @@ function renderCartItems() {
   renderCartInfo(totalPrice, totalQuantity);
 }
 
-//данные о заказе - блок оформить заказ
 function renderCartInfo(totalPrice, totalQuantity) {
   const cartInfoElement = document.getElementById("cartInfo");
   cartInfoElement.innerHTML = `
@@ -128,10 +119,13 @@ function renderCartInfo(totalPrice, totalQuantity) {
           <div class="d-flex justify-content-between">
             <div class="ligth">Сумма:</div>
             <p>${totalPrice}₽</p>
+            <input type='hidden'  id="totalPriceInp" value='${totalPrice}'>
+
           </div>
           <div class="d-flex justify-content-between">
             <div class="ligth">Товаров:</div>
             <p>${totalQuantity} шт</p>
+            <input type='hidden' id="totalQuantityInp" value='${totalQuantity}'>
           </div>
         </div>
       </div>
@@ -153,7 +147,6 @@ function renderCartInfo(totalPrice, totalQuantity) {
   `;
   const orderBtn = cartInfoElement.querySelector("#orderButton");
 
-  //если корзина пустая  - убираем  блок оформления
   if (totalQuantity > 0) {
     cartInfoElement.style.display = "block";
     document.getElementById("no-items").style.display = "none";
@@ -162,6 +155,7 @@ function renderCartInfo(totalPrice, totalQuantity) {
     document.getElementById("no-items").style.display = "block";
   }
 
+  // Обработчик события для кнопки "Оформить заказ"
   orderBtn.addEventListener("click", () => {
     orderForm.style.display = "block";
     //cartItems.style.display = "none";
@@ -173,74 +167,50 @@ window.addEventListener("load", renderCartItems);
 const orderButton = document.getElementById("orderButton");
 const cartInfo = document.getElementById("cartInfo");
 const orderForm = document.getElementById("orderForm");
+
+// Исправление обработчика события для формы заказа
 const OrderMakeBtn = document.getElementById("OrderMakeBtn");
+// OrderMakeBtn.addEventListener("submit", showOrderConfirmation());
+// Исправление обработчика события для формы заказа
+OrderMakeBtn.addEventListener("submit", showOrderConfirmation());
 
-// // Функция для отображения всплывающего окна с данными заказа
-// function showOrderConfirmation(total, itemCount, date) {
-//   console.log("jsiojio");
-//   // Создается HTML-код для всплывающего окна
-//   const confirmation = `
-//         <div class="modal" tabindex="-1">
-//           <div class="modal-dialog">
-//             <div class="modal-content">
-//               <div class="modal-header">
-//                 <h5 class="modal-title">Заказ оформлен</h5>
-//                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-//               </div>
-//               <div class="modal-body">
-//                 <p>Сумма: ${total} ₽</p>
-//                 <p>Количество товаров: ${itemCount}</p>
-//                 <p>Дата: ${date}</p>
-//                 <p>Спасибо за ваш заказ!</p>
-//               </div>
-//               <div class="modal-footer">
-//                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       `;
-
-//   const modalElement = document.createElement("div");
-//   modalElement.innerHTML = confirmation;
-//   console.log(modalElement.innerHTML);
-//   document.body.appendChild(modalElement);
-//   console.log(document.body.contains(modalElement));
-// }
-
-OrderMakeBtn.onclick = function (total, itemCount, date) {
-  console.log("jsiojio");
+// Функция для отображения всплывающего окна с данными заказа
+function showOrderConfirmation() {
+  const date = new Date().toLocaleDateString(); // Текущая дата
+  let price = 0;
+  let Quantity = 0;
+  cartItems.forEach((item) => {
+    if (item.quantity > 0) {
+      price += item.cost * item.quantity;
+      Quantity += item.quantity;
+    }
+  });
   // Создается HTML-код для всплывающего окна
-
   const confirmation = `
- 
-  
-  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-  aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-      <p>Сумма: ${total} ₽</p>
-      <p>Количество товаров: ${itemCount}</p>
-      <p>Дата: ${date}</p>
-      <p>Спасибо за ваш заказ!</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
-      </div>
-    </div>
-  </div>
-</div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Заказ оформлен</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Сумма: ${price} ₽</p>
+                <p>Количество товаров: ${Quantity}</p>
+                <p>Дата: ${date}</p>
+                <p>Спасибо за ваш заказ!</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+              </div>
+            </div>
+          </div>
+        </div>
       `;
 
+  // Создается новый элемент для вставки HTML-кода
   const modalElement = document.createElement("div");
   modalElement.innerHTML = confirmation;
-  console.log(modalElement.innerHTML);
+  // Вставляем созданный элемент в конец <body>
   document.body.appendChild(modalElement);
-  console.log(document.body.contains(modalElement));
-};
+}
