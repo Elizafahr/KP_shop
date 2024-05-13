@@ -206,6 +206,8 @@ function showOrderConfirmation() {
         </div>
       `;
 
+
+  //
   // cartItems.splice(0, cartItems.length);
   // renderCartItems();
 
