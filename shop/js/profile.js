@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Определение, какой набор данных использовать
   let userData = storedUser; // По умолчанию используется данные 'user'
-  if (Object.keys(storedUserOld).length > 0) { // Если есть данные 'userOld'
+  if (Object.keys(userData).length <= 0) { // Если есть данные 'userOld'
     userData = storedUserOld; // Используем данные 'userOld'
   }
 

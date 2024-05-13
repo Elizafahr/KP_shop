@@ -168,10 +168,7 @@ const orderButton = document.getElementById("orderButton");
 const cartInfo = document.getElementById("cartInfo");
 const orderForm = document.getElementById("orderForm");
 
-// Исправление обработчика события для формы заказа
-const OrderMakeBtn = document.getElementById("OrderMakeBtn");
-// OrderMakeBtn.addEventListener("submit", showOrderConfirmation());
-// Исправление обработчика события для формы заказа
+ const OrderMakeBtn = document.getElementById("OrderMakeBtn");
 OrderMakeBtn.addEventListener("submit", showOrderConfirmation());
 
 // Функция для отображения всплывающего окна с данными заказа
@@ -185,7 +182,9 @@ function showOrderConfirmation() {
       Quantity += item.quantity;
     }
   });
-  // Создается HTML-код для всплывающего окна
+
+  
+  //  HTML-код для всплывающего окна
   const confirmation = `
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
