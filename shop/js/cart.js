@@ -206,7 +206,6 @@ function showOrderConfirmation() {
         </div>
       `;
 
-
   //
   // cartItems.splice(0, cartItems.length);
   // renderCartItems();
@@ -225,4 +224,22 @@ function showOrderConfirmation() {
   modalElement.innerHTML = confirmation;
   // Вставляем созданный элемент в конец <body>
   document.body.appendChild(modalElement);
+
+
+
+  const storedUser2 = JSON.parse(localStorage.getItem("user") || "{}");
+  const storedUserOld2 = JSON.parse(localStorage.getItem("userOld") || "{}");
+  let userData2 = storedUser2; // По умолчанию используется данные 'user'
+  if (Object.keys(userData2).length <= 0) {
+    userData2 = storedUserOld2;
+  }
+
+  // Проверяем значение ordered и показываем/скрываем соответствующий блок
+  function markOrderedAsTrue() {
+    userData2.ordered = true; // Установка значения ordered в true
+    localStorage.setItem("user", JSON.stringify(userData2)); // Сохранение обновленных данных в localStorage
+  }
+
+   
+  markOrderedAsTrue();
 }

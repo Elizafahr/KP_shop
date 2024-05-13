@@ -57,31 +57,36 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
+  blocks()
 
-
-    // Получение данных пользователя из localStorage
-    const storedUser2 = JSON.parse(localStorage.getItem("user") || "{}");
-    const storedUserOld2 = JSON.parse(localStorage.getItem("userOld") || "{}");
-  
-    // Определение, какой набор данных использовать
-    let userData2 = storedUser2; // По умолчанию используется данные 'user'
-    if (Object.keys(userData2).length <= 0) {
-      // Если есть данные 'userOld'
-      userData2 = storedUserOld2; // Используем данные 'userOld'
-    }
-
-
-  // Находим блоки, которые нужно показать или скрыть
-  const orderedBlock = document.getElementById("orders-notnull");
-  const notOrderedBlock = document.getElementById("orders-none");
-
-  // Проверяем значение ordered и показываем/скрываем соответствующий блок
-  if ( userData2.ordered === "true") {
-    orderedBlock.style.display = "block";
-    notOrderedBlock.style.display = "none";
-  }
-   else {
-    orderedBlock.style.display = "none";
-    notOrderedBlock.style.display = "block";
-  }
+     
 });
+
+
+function blocks(){
+  // Получение данных пользователя из localStorage
+  const storedUser2 = JSON.parse(localStorage.getItem("user") || "{}");
+  const storedUserOld2 = JSON.parse(localStorage.getItem("userOld") || "{}");
+
+  // Определение, какой набор данных использовать
+  let userData2 = storedUser2; // По умолчанию используется данные 'user'
+  if (Object.keys(userData2).length <= 0) {
+    // Если есть данные 'userOld'
+    userData2 = storedUserOld2; // Используем данные 'userOld'
+  }
+
+
+// Находим блоки, которые нужно показать или скрыть
+const orderedBlock = document.getElementById("orders-notnull");
+const notOrderedBlock = document.getElementById("orders-none");
+console.log(userData2)
+// Проверяем значение ordered и показываем/скрываем соответствующий блок
+if ( userData2.ordered === "true") {
+  orderedBlock.style.display = "block";
+  notOrderedBlock.style.display = "none";
+}
+ else {
+  orderedBlock.style.display = "none";
+  notOrderedBlock.style.display = "block";
+}
+}
