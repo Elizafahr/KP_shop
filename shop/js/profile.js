@@ -7,19 +7,20 @@ document.addEventListener("DOMContentLoaded", function () {
   const userForm = document.getElementById("userForm");
 
   // Получение данных пользователя из localStorage
-  const storedUser = JSON.parse(localStorage.getItem("user") || "{}");   
-   const storedUserOld = JSON.parse(localStorage.getItem("userOld") || "{}");
-
-
+  const storedUser = JSON.parse(localStorage.getItem("user") || "{}");
+  const storedUserOld = JSON.parse(localStorage.getItem("userOld") || "{}");
 
   // Определение, какой набор данных использовать
   let userData = storedUser; // По умолчанию используется данные 'user'
-  if (Object.keys(userData).length <= 0) { // Если есть данные 'userOld'
+  if (Object.keys(userData).length <= 0) {
+    // Если есть данные 'userOld'
     userData = storedUserOld; // Используем данные 'userOld'
   }
 
   // Заполнение формы из localStorage
-  userNameEl.textContent = `${userData.username || ""} ${userData.surname || ""}`;
+  userNameEl.textContent = `${userData.username || ""} ${
+    userData.surname || ""
+  }`;
   userEmailEl.textContent = userData.email || "";
   userPhoneEl.textContent = userData.phoneNumber || "";
   userCityEl.textContent = userData.adress || "";
@@ -41,13 +42,46 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("user", JSON.stringify(updatedUserData)); // Обновляем данные 'user'
 
     // Обновление отображения информации о пользователе на странице
-    userNameEl.textContent = `${updatedUserData.username || ""} ${updatedUserData.surname || ""}`;
+    userNameEl.textContent = `${updatedUserData.username || ""} ${
+      updatedUserData.surname || ""
+    }`;
     userEmailEl.textContent = updatedUserData.email || "";
     userPhoneEl.textContent = updatedUserData.phoneNumber || "";
     userCityEl.textContent = updatedUserData.adress || "";
 
     // Закрытие модального окна
-    const modal = bootstrap.Modal.getInstance(document.getElementById("exampleModal"));
+    const modal = bootstrap.Modal.getInstance(
+      document.getElementById("exampleModal")
+    );
     modal.hide();
   });
+
+
+
+
+    // Получение данных пользователя из localStorage
+    const storedUser2 = JSON.parse(localStorage.getItem("user") || "{}");
+    const storedUserOld2 = JSON.parse(localStorage.getItem("userOld") || "{}");
+  
+    // Определение, какой набор данных использовать
+    let userData2 = storedUser2; // По умолчанию используется данные 'user'
+    if (Object.keys(userData2).length <= 0) {
+      // Если есть данные 'userOld'
+      userData2 = storedUserOld2; // Используем данные 'userOld'
+    }
+
+
+  // Находим блоки, которые нужно показать или скрыть
+  const orderedBlock = document.getElementById("orders-notnull");
+  const notOrderedBlock = document.getElementById("orders-none");
+
+  // Проверяем значение ordered и показываем/скрываем соответствующий блок
+  if ( userData2.ordered === "true") {
+    orderedBlock.style.display = "block";
+    notOrderedBlock.style.display = "none";
+  }
+   else {
+    orderedBlock.style.display = "none";
+    notOrderedBlock.style.display = "block";
+  }
 });

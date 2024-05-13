@@ -124,13 +124,13 @@
     <div class="orders col-lg-6">
       <h2>История заказов</h2>
 
-      <div class="orders-none">
+      <div class="orders-none" id="orders-none">
         <p>
           Заказов еще нет! <a href="/catalog.html"> Перейти к покупкам</a>
         </p>
       </div>
 
-      <div class="orders-notnull">
+      <div class="orders-notnull" id="orders-notnull">
         <!-- items header -->
         <div class="orders_table_header">
           <div class="orders_table_header_item">Дата</div>
@@ -253,42 +253,26 @@
     </div>
   </div>
 
-
   <script src="/js/profile.js"></script>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
- 
- 
-   // Функция для выхода из аккаунта
-   function logout() {
-        // Удаляем данные пользователя из localStorage
-        localStorage.removeItem('user');
+    // Функция для выхода из аккаунта
+    function logout() {
+      // Удаляем данные пользователя из localStorage
+      localStorage.removeItem("user");
 
-        // Перенаправляем пользователя на страницу входа
-        window.location.href = "login.html";
+      // Перенаправляем пользователя на страницу входа
+      window.location.href = "login.html";
     }
-    
-    
-    
-    // const storedUser = localStorage.getItem('user');
-
-    // if (storedUser) {
-    //   // Пользователь авторизован, перенаправляем на profile.html
-    //   window.location.href = 'profile.html';
-    // } else {
-    //   // Пользователь не авторизован, перенаправляем на login.html
-    //   window.location.href = 'login.html';
-    // }
-
-
-
 
     $(document).ready(function () {
       $("#accordionTable tr").click(function () {
         $(this).next().slideToggle();
       });
     });
+
+   
   </script>
   <!--bootstrap-->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

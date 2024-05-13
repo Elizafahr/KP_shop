@@ -168,7 +168,7 @@ const orderButton = document.getElementById("orderButton");
 const cartInfo = document.getElementById("cartInfo");
 const orderForm = document.getElementById("orderForm");
 
- const OrderMakeBtn = document.getElementById("OrderMakeBtn");
+const OrderMakeBtn = document.getElementById("OrderMakeBtn");
 OrderMakeBtn.addEventListener("submit", showOrderConfirmation());
 
 // Функция для отображения всплывающего окна с данными заказа
@@ -183,7 +183,6 @@ function showOrderConfirmation() {
     }
   });
 
-  
   //  HTML-код для всплывающего окна
   const confirmation = `
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -200,12 +199,24 @@ function showOrderConfirmation() {
                 <p>Спасибо за ваш заказ!</p>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                <button type="button" id="clear" class="btn btn-secondary" data-bs-dismiss="modal" >Закрыть</button>
               </div>
             </div>
           </div>
         </div>
       `;
+
+  // cartItems.splice(0, cartItems.length);
+  // renderCartItems();
+
+  // const cartInfoElement = document.getElementById("cartInfo");
+  // if (Quantity === 0) {
+  //   cartInfoElement.style.display = "none";
+  //   document.getElementById("no-items").style.display = "block";
+  // } else {
+  //   cartInfoElement.style.display = "block";
+  //   document.getElementById("no-items").style.display = "none";
+  // }
 
   // Создается новый элемент для вставки HTML-кода
   const modalElement = document.createElement("div");
