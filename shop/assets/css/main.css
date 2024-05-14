@@ -650,17 +650,24 @@ body table tr td {
 }
 
 body table .category {
-  padding-top: 10px;
+  padding-top: 10px !important; 
 }
 
 body .product-image {
   background-color: #f0f5fd;
   display: flex;
   align-items: center;
-  width: -moz-max-content;
-  width: max-content;
-}
+ 
+  width: 100%;
+  max-width: 400px;
+  min-height: 300px;
+  padding: 30px;
+  border-radius: 15px; 
 
+}
+.product-image img{
+  width: 100%; 
+}
 #contact-page {
   background-color: #fff !important;
 }
@@ -932,11 +939,11 @@ details[open] summary {
         
         */
 
-.categCard .image-card {
+.categCard .image-card , .specialCard  .image-card {
   padding: 15px;
 }
 
-.categCard .image-card img {
+.categCard .image-card img , .specialCard  .image-card img{
   object-fit: scale-down;
 }
 
@@ -1054,12 +1061,39 @@ font-size: 24px;
   padding-left: 2.5em !important; 
 }
 
-
-
-@media (max-width: 360px) {}
-@media (max-width: 360px) {}
-@media (max-width: 1366px) {}
-
+ 
 .filter-group button{
   color: white;
 }
+
+.swiper-button-next, .swiper-button-prev {
+ 
+  height: 10px !important;
+  width: 6px !important;
+}
+.swiper-button-next svg, .swiper-button-prev svg {
+  width: 100%;
+  height: 100%; 
+}
+/* 
+.swiper-button-next svg, .swiper-button-prev svg {
+  height: 10px !important;
+  width: 6px !important;
+} */
+
+
+ 
+.header-container .nav-active .nav-link {
+  color: #0069c6 !important;
+  border: 1px solid #0069c6;
+  border-radius: 100px;
+  padding: 3px;
+  margin-top: 4px;
+}
+
+
+
+ 
+/* <div class="product-image col-lg-6">
+<img src="" alt=""  id="productImage" />
+</div> */

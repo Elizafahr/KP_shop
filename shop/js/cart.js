@@ -157,11 +157,16 @@ function renderCartInfo(totalPrice, totalQuantity) {
 
   // Обработчик события для кнопки "Оформить заказ"
   orderBtn.addEventListener("click", () => {
-    orderForm.style.display = "block";
-    //cartItems.style.display = "none";
-    cartInfo.style.display = "none";
+     if (localStorage.getItem("authParam") == 'true') {
+      orderForm.style.display = "block";
+      //cartItems.style.display = "none";
+      cartInfo.style.display = "none";
+    } else if (localStorage.getItem("authParam") !== true)
+      alert("Авторизуйтесь!");
   });
 }
+
+
 window.addEventListener("load", renderCartItems);
 
 const orderButton = document.getElementById("orderButton");
@@ -225,8 +230,6 @@ function showOrderConfirmation() {
   // Вставляем созданный элемент в конец <body>
   document.body.appendChild(modalElement);
 
-
-
   const storedUser2 = JSON.parse(localStorage.getItem("user") || "{}");
   const storedUserOld2 = JSON.parse(localStorage.getItem("userOld") || "{}");
   let userData2 = storedUser2; // По умолчанию используется данные 'user'
@@ -234,12 +237,11 @@ function showOrderConfirmation() {
     userData2 = storedUserOld2;
   }
 
-  // Проверяем значение ordered и показываем/скрываем соответствующий блок
-  function markOrderedAsTrue() {
-    userData2.ordered = true; // Установка значения ordered в true
-    localStorage.setItem("user", JSON.stringify(userData2)); // Сохранение обновленных данных в localStorage
-  }
+  // // Проверяем значение ordered и показываем/скрываем соответствующий блок
+  // function markOrderedAsTrue() {
+  //   userData2.ordered = true; // Установка значения ordered в true
+  //   localStorage.setItem("user", JSON.stringify(userData2)); // Сохранение обновленных данных в localStorage
+  // }
 
-   
-  markOrderedAsTrue();
+  // markOrderedAsTrue();
 }

@@ -54,8 +54,8 @@
           <li class="nav-item">
             <a href="about.html" class="nav-link link-dark px-2">О нас</a>
           </li>
-          <li class="nav-item">
-            <a href="contact.htmlW" class="nav-link link-dark px-2">Контакты</a>
+          <li class="nav-item nav-active">
+            <a href="contact.html" class=" nav-link link-dark px-2">Контакты</a>
           </li>
         </ul>
         <ul class="nav">
@@ -81,54 +81,51 @@
   <!--Блок с основным контентом-->
   <main>
 
-    <!--Блок контактов-->
-    <section id="contact" class="contact_box  padd-50">
-      <div class="box">
-        <h2 class="mb-4">Где купить? <span>Екатеринбург</span></h2>
-        <div class="contact   d-flex row gap-4">
-          <div class="map col-lg-5" style="  background-color: aliceblue;">
-            <div class="low row">
-              <div class="column-1 col-lg-6 ">
-                <div class="contact-col-info ">
-                  <h6>Адресс</h6>
-                  <p>lorem lorem lorem lorem lorem lorem lorem </p>
-                </div>
+  <!--Блок контактов-->
+  <section id="contact" class="contact_box padd-50">
+    <div class="box">
+      <h2 class="mb-4">Где купить? <span>Екатеринбург</span></h2>
+      <div class="contact d-flex row gap-3">
+        <div class="map col-lg-5" style="background-color: aliceblue">
+          <div class="low row">
+            <div class="column-1 col-lg-6">
+              <div class="contact-col-info">
+                <h6>Адресс</h6>
+                <p>г. Екатеринбург, ул Мира, 8</p>
               </div>
-              <div class="column-2 col-lg-6 ">
-                <div class="contact-col-info">
-                  <h6>Email</h6>
-                  <p><span>lorem@email.com</span></p>
-                </div>
-                <div class="contact-col-info">
-                  <h6>Номер телефона</h6>
-                  <p><span>8-800-555-35-35</span>></p>
-                </div>
+            </div>
+            <div class="column-2 col-lg-6">
+              <div class="contact-col-info">
+                <h6>Email</h6>
+                <p><span>sportyfy@email.com</span></p>
+              </div>
+              <div class="contact-col-info">
+                <h6>Номер телефона</h6>
+                <p><span>8-800-555-35-35</span></p>
               </div>
             </div>
           </div>
-          <div class="contact-form col-lg-6">
-            <form>
-              <h3>Свяжитесь с нами</h3>
-              <p>lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-                lorem lorem lorem lorem </p>
-              <div class="form-group">
-                <input type="text" placeholder="Your name" class="form-control" id="exampleInputName"
-                  aria-describedby="NameHelp">
-              </div>
-              <div class="form-group">
-                <input type="email" placeholder="Your email" class="form-control" id="exampleInputEmail1"
-                  aria-describedby="emailHelp">
-              </div>
-              <div class="form-group">
-                <input type="text" placeholder="Your message" class="form-control" id="exampleInputMessage">
-              </div>
-
-              <button type="submit" class="btn btn-blue mt-2">Send your message</button>
-            </form>
-          </div>
         </div>
-    </section>
-
+        <div class="contact-form col-lg-6">
+          <form>
+            <h3>Свяжитесь с нами</h3>
+            <p>Остались вопросы? Заполните форму и мы свяжимся с вами!</p>
+            <div class="form-group">
+              <input type="text" placeholder="Ваше имя" class="form-control" id="exampleInputName" aria-describedby="NameHelp" required>
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Ваш email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="Сообщение" class="form-control" id="exampleInputMessage" required>
+            </div>
+            <button type="submit" class="btn btn-blue mt-2">Отправить</button>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 

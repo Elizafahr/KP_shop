@@ -182,6 +182,7 @@
   </div>
   <script>
     //auth-reg
+ //auth-reg
 
     //admin
     localStorage.setItem(
@@ -200,7 +201,7 @@
 
     //user с заказами
     localStorage.setItem(
-      "userOld",
+      "oldUser",
       JSON.stringify({
         username: "oldUser",
         surname: "oldSurname",
@@ -212,8 +213,7 @@
         ordered: "true",
       })
     );
-
-    //Обработка формы регистрации
+     //Обработка формы регистрации
     document
       .querySelector("#register")
       .addEventListener("submit", function (event) {
@@ -240,7 +240,7 @@
         //    сохраненные данные пользователя из localStorage
         const storedUser = JSON.parse(localStorage.getItem("user"));
         const storedAdmin = JSON.parse(localStorage.getItem("admin"));
-        const storedUserOld = JSON.parse(localStorage.getItem("userOld"));
+        const storedOldUser = JSON.parse(localStorage.getItem("oldUser"));
 
         // Проверяем совпадение данных для каждого пользователя
         if (
@@ -250,12 +250,14 @@
           (storedAdmin &&
             storedAdmin.username === userData.username &&
             storedAdmin.password === userData.password) ||
-          (storedUserOld &&
-            storedUserOld.username === userData.username &&
-            storedUserOld.password === userData.password)
+          (storedOldUser &&
+            storedOldUser.username === userData.username &&
+            storedOldUser.password === userData.password)
         ) {
           alert("Вход успешен!");
+          localStorage.setItem('authParam', true);
           window.location.replace("profile.html");
+
         } else {
           alert("Неверное имя пользователя или пароль");
         }
