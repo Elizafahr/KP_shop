@@ -196,7 +196,7 @@ a:hover {
 }
 
 .header-container .header-content {
-  background-image: url("/assets/img/png/Group 33725 (1).png");
+  background-image: url("../img/png/Group 33725 (1).png");
   background-repeat: no-repeat;
   background-position: bottom center;
   margin-bottom: -15px;
@@ -220,7 +220,7 @@ main #cssportal-grid {
 
 main #cssportal-grid #div1 {
   grid-area: 1/1/3/2;
-  background-image: url("/assets/img/png/category/category-05-bicycles-adult.png");
+  background-image: url("../img/png/category/category-05-bicycles-adult.png");
   border-radius: 15px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -232,28 +232,28 @@ main #cssportal-grid #div2 {
   grid-area: 1/2/2/3;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center; background-image: url("/assets/img/png/category/category-03-scooter.png");
+  background-position: center; background-image: url("../img/png/category/category-03-scooter.png");
 }
 
 main #cssportal-grid #div3 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;grid-area: 1/3/2/4;
-  background-image: url("/assets/img/png/category/category-04-bicycles-child.png");
+  background-image: url("../img/png/category/category-04-bicycles-child.png");
 }
 
 main #cssportal-grid #div4 {
   grid-area: 2/2/3/3;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center; background-image: url("/assets/img/png/category/category-02-skate.png");
+  background-position: center; background-image: url("../img/png/category/category-02-skate.png");
 }
 
 main #cssportal-grid #div5 {
   grid-area: 2/3/3/4;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;  background-image: url("/assets/img/png/category/category-01-bicycles-mountain.png");
+  background-position: center;  background-image: url("../img/png/category/category-01-bicycles-mountain.png");
 }
 /* Стили для устройств с шириной экрана менее 677 пикселей */
 @media (max-width: 676px) {
@@ -419,7 +419,7 @@ main swiper-container {
 
 main .about {
   padding: 100px 0 50px 0;
-  background-image: url("/assets/img/png/bg-mountain.png");
+  background-image: url("../img/png/bg-mountain.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
@@ -508,37 +508,37 @@ main .angry-grid * {
 }
 
 main .angry-grid #item-0 {
-  background-image: url("/assets/img/png/gallery/img-gallery-01.png");
+  background-image: url("../img/png/gallery/img-gallery-01.png");
   grid-row: 1/2;
   grid-column: 2/3;
 }
 
 main .angry-grid #item-1 {
-  background-image: url("/assets/img/png/gallery/img-gallery-02.png");
+  background-image: url("../img/png/gallery/img-gallery-02.png");
   grid-row: 1/2;
   grid-column: 1/2;
 }
 
 main .angry-grid #item-2 {
-  background-image: url("/assets/img/png/gallery/img-gallery-03.png");
+  background-image: url("../img/png/gallery/img-gallery-03.png");
   grid-row: 1/2;
   grid-column: 3/4;
 }
 
 main .angry-grid #item-3 {
-  background-image: url("/assets/img/png/gallery/img-gallery-06.png");
+  background-image: url("../img/png/gallery/img-gallery-06.png");
   grid-row: 2/3;
   grid-column: 3/4;
 }
 
 main .angry-grid #item-4 {
-  background-image: url("/assets/img/png/gallery/img-gallery-07.png");
+  background-image: url("../img/png/gallery/img-gallery-07.png");
   grid-row: 2/3;
   grid-column: 2/3;
 }
 
 main .angry-grid #item-5 {
-  background-image: url("/assets/img/png/gallery/img-gallery-08.png");
+  background-image: url("../img/png/gallery/img-gallery-08.png");
   grid-row: 2/3;
   grid-column: 1/2;
 }
@@ -673,7 +673,7 @@ body .product-image {
 }
 
 #contact-page #contact {
-  background-image: url("/assets/img/png/bg-mountain.png");
+  background-image: url("../img/png/bg-mountain.png");
   background-size: cover;
   padding-top: 0 !important;
   padding-bottom: 220px !important;
@@ -693,7 +693,7 @@ body .product-image {
 }
 
 .contact .map {
-  background-image: url("/assets/img/png/map.png");
+  background-image: url("../img/png/map.png");
   background-size: cover;
   border-radius: 15px;
   position: relative;
@@ -848,7 +848,7 @@ details[open] summary {
 }
 
 #loginAuthPage {
-  background-image: url("/assets/img/png/bg-mountain.png");
+  background-image: url("../img/png/bg-mountain.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
