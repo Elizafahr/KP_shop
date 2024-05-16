@@ -157,7 +157,7 @@ function renderCartInfo(totalPrice, totalQuantity) {
 
   // Обработчик события для кнопки "Оформить заказ"
   orderBtn.addEventListener("click", () => {
-     if (localStorage.getItem("authParam") == 'true') {
+    if (localStorage.getItem("authParam") == "true") {
       orderForm.style.display = "block";
       //cartItems.style.display = "none";
       cartInfo.style.display = "none";
@@ -165,7 +165,6 @@ function renderCartInfo(totalPrice, totalQuantity) {
       alert("Авторизуйтесь!");
   });
 }
-
 
 window.addEventListener("load", renderCartItems);
 
@@ -190,12 +189,14 @@ function showOrderConfirmation() {
 
   //  HTML-код для всплывающего окна
   const confirmation = `
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" 
+        aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title">Заказ оформлен</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" 
+                aria-label="Close"></button>
               </div>
               <div class="modal-body">
                 <p>Сумма: ${price} ₽</p>
@@ -204,31 +205,17 @@ function showOrderConfirmation() {
                 <p>Спасибо за ваш заказ!</p>
               </div>
               <div class="modal-footer">
-                <button type="button" id="clear" class="btn btn-secondary" data-bs-dismiss="modal" >Закрыть</button>
+                <button type="button" id="clear" class="btn btn-secondary" data-bs-dismiss="modal">
+                Закрыть</button>
               </div>
             </div>
           </div>
         </div>
       `;
 
-  //
-  // cartItems.splice(0, cartItems.length);
-  // renderCartItems();
-
-  // const cartInfoElement = document.getElementById("cartInfo");
-  // if (Quantity === 0) {
-  //   cartInfoElement.style.display = "none";
-  //   document.getElementById("no-items").style.display = "block";
-  // } else {
-  //   cartInfoElement.style.display = "block";
-  //   document.getElementById("no-items").style.display = "none";
-  // }
-
-  // Создается новый элемент для вставки HTML-кода
-  const modalElement = document.createElement("div");
+  const modalElement = document.createElement("div");  // Создается новый элемент для вставки HTML-кода
   modalElement.innerHTML = confirmation;
-  // Вставляем созданный элемент в конец <body>
-  document.body.appendChild(modalElement);
+  document.body.appendChild(modalElement);  // Вставляем созданный элемент в конец <body>
 
   const storedUser2 = JSON.parse(localStorage.getItem("user") || "{}");
   const storedUserOld2 = JSON.parse(localStorage.getItem("userOld") || "{}");
@@ -236,12 +223,4 @@ function showOrderConfirmation() {
   if (Object.keys(userData2).length <= 0) {
     userData2 = storedUserOld2;
   }
-
-  // // Проверяем значение ordered и показываем/скрываем соответствующий блок
-  // function markOrderedAsTrue() {
-  //   userData2.ordered = true; // Установка значения ordered в true
-  //   localStorage.setItem("user", JSON.stringify(userData2)); // Сохранение обновленных данных в localStorage
-  // }
-
-  // markOrderedAsTrue();
 }

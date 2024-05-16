@@ -101,7 +101,7 @@ legend {
   max-width: 1140px;
   padding: 0 15px;
   margin: 0 auto;
-} 
+}
 @media (max-width: 1366px) {
   .box {
     max-width: 90%;
@@ -202,7 +202,6 @@ a:hover {
   margin-bottom: -15px;
 }
 
-
 main {
   background-color: white;
 }
@@ -232,13 +231,15 @@ main #cssportal-grid #div2 {
   grid-area: 1/2/2/3;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center; background-image: url("../img/png/category/category-03-scooter.png");
+  background-position: center;
+  background-image: url("../img/png/category/category-03-scooter.png");
 }
 
 main #cssportal-grid #div3 {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;grid-area: 1/3/2/4;
+  background-position: center;
+  grid-area: 1/3/2/4;
   background-image: url("../img/png/category/category-04-bicycles-child.png");
 }
 
@@ -246,57 +247,74 @@ main #cssportal-grid #div4 {
   grid-area: 2/2/3/3;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center; background-image: url("../img/png/category/category-02-skate.png");
+  background-position: center;
+  background-image: url("../img/png/category/category-02-skate.png");
 }
 
 main #cssportal-grid #div5 {
   grid-area: 2/3/3/4;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;  background-image: url("../img/png/category/category-01-bicycles-mountain.png");
+  background-position: center;
+  background-image: url("../img/png/category/category-01-bicycles-mountain.png");
 }
 /* Стили для устройств с шириной экрана менее 677 пикселей */
 @media (max-width: 676px) {
-  
-main #cssportal-grid {
-  display: grid;
-  grid-template-columns: 2fr repeat(1, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 40px;
-  grid-row-gap: 40px;
-  height: max-content;
-  background-color: #fff;
-  padding: 50px 0;
-} 
+  main #cssportal-grid {
+    display: grid;
+    grid-template-columns: 2fr repeat(1, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 20px;
+    height: max-content;
+    background-color: #fff;
+    padding: 50px 0;
+    background-size: 50px;
+  }
   main #cssportal-grid #div1 {
     grid-area: 1/1/2/3;
- 
-    background-position: left top;
+    background-image: none;
+    background-color: #eef4fd;
     height: 100px;
+    height: max-content;
+    /* background-color: #eef4fd;
+    background-size: 50%; */
   }
 
   main #cssportal-grid #div2 {
     grid-area: 2/1/3/3;
     height: 100px;
-    background-position: left center;
+    background-image: none;
+    background-color: #eef4fd; /* background-color: #eef4fd;
+    background-size: 30%; */
+    height: max-content;
   }
 
   main #cssportal-grid #div3 {
     grid-area: 3/1/4/3;
     height: 100px;
-    background-position: left center;
+    background-image: none;
+    background-color: #eef4fd; /* background-color: #eef4fd;
+    background-size: 30%; */
+    height: max-content;
   }
 
   main #cssportal-grid #div4 {
-    grid-area: 4/1/5/3; 
-     height: 100px;
-     background-position: left center;
+    grid-area: 4/1/5/3;
+    height: 100px;
+    background-image: none;
+    background-color: #eef4fd;
+    /*
+    background-size: 50%; */
+    height: max-content;
   }
 
   main #cssportal-grid #div5 {
     grid-area: 5/1/6/3;
     height: 100px;
-    background-position: right center;
+    background-image: none;
+    background-color: #eef4fd;
+    height: max-content;
   }
 }
 
@@ -314,8 +332,6 @@ main #cssportal-grid {
   }
 } */
 
-
-
 main #cssportal-grid .categ {
   background-size: auto 100%;
   background-repeat: no-repeat;
@@ -323,7 +339,6 @@ main #cssportal-grid .categ {
   padding: 20px;
   border-radius: 15px;
 }
-
 
 main .special {
   background-color: white;
@@ -454,14 +469,16 @@ main #rewiewsContainer .rewiews swiper-container {
   height: -moz-max-content !important;
   height: max-content !important;
 }
- 
-@media (max-width: 360px) {}
+
+@media (max-width: 360px) {
+}
 /* @media (max-width: 677px) {
   #mySwiperRewiews swiper-slide{ 
     width: 80vw !important;
   }
 } */
-@media (max-width: 1366px) {}
+@media (max-width: 1366px) {
+}
 main #rewiewsContainer .rewiews .review {
   background-color: #fff;
   padding: 30px;
@@ -479,7 +496,7 @@ main #rewiewsContainer .links-rewiews {
 
 @media (max-width: 677px) {
   main #rewiewsContainer .links-rewiews {
-    grid-template-columns:   auto;
+    grid-template-columns: auto;
     row-gap: 15px;
   }
 }
@@ -605,7 +622,7 @@ main .angry-grid #item-5 {
 }
 @media (max-width: 1006px) {
   .headerBg .header-content .box #aboutHeaderBicycle {
-   scale: 0.8 ;
+    scale: 0.8;
   }
 }
 @media (max-width: 766px) {
@@ -621,7 +638,6 @@ main .angry-grid #item-5 {
     width: auto;
   }
 }
-
 
 .about-text .left img,
 .about-text .rigth img {
@@ -650,23 +666,22 @@ body table tr td {
 }
 
 body table .category {
-  padding-top: 10px !important; 
+  padding-top: 10px !important;
 }
 
 body .product-image {
   background-color: #f0f5fd;
   display: flex;
   align-items: center;
- 
+
   width: 100%;
   max-width: 400px;
   min-height: 300px;
   padding: 30px;
-  border-radius: 15px; 
-
+  border-radius: 15px;
 }
-.product-image img{
-  width: 100%; 
+.product-image img {
+  width: 100%;
 }
 #contact-page {
   background-color: #fff !important;
@@ -939,11 +954,13 @@ details[open] summary {
         
         */
 
-.categCard .image-card , .specialCard  .image-card {
+.categCard .image-card,
+.specialCard .image-card {
   padding: 15px;
 }
 
-.categCard .image-card img , .specialCard  .image-card img{
+.categCard .image-card img,
+.specialCard .image-card img {
   object-fit: scale-down;
 }
 
@@ -1006,74 +1023,72 @@ details[open] summary {
   max-height: 150px;
 }
 
-.order, .delivery, .payWay {
+.order,
+.delivery,
+.payWay {
   border: 1px solid #d2d2d2;
   border-radius: 20px;
-  padding: 30px; 
+  padding: 30px;
 }
-.order-top{
+.order-top {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
-.order-info{
+.order-info {
   display: flex;
   flex-direction: column;
- }
-.order-bottom{
+}
+.order-bottom {
   padding-top: 20px;
-  border-top:1PX solid #d2d2d2 ;
+  border-top: 1px solid #d2d2d2;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-.res{
+.res {
   font-weight: 400;
-font-size: 24px;
+  font-size: 24px;
 }
 
-.orderForm .row, .col-lg-6 { 
-  
+.orderForm .row,
+.col-lg-6 {
   padding-right: 0 !important;
 
-  padding-left:  0 !important;
-  
+  padding-left: 0 !important;
 }
 
-.inputCheckbox{
-  background:  #006ac60e;
-  border: 1px solid  #006ac691;
+.inputCheckbox {
+  background: #006ac60e;
+  border: 1px solid #006ac691;
   border-radius: 4px;
   color: #000;
-  padding-top: 15px ;
-  padding-bottom: 15px ; 
+  padding-top: 15px;
+  padding-bottom: 15px;
   width: 100%;
   margin-top: 5px;
-
 }
 
-.inputCheckbox *{
-   
+.inputCheckbox * {
   color: #000;
 }
-  .form-check {
-   
-  padding-left: 2.5em !important; 
+.form-check {
+  padding-left: 2.5em !important;
 }
 
- 
-.filter-group button{
+.filter-group button {
   color: white;
 }
 
-.swiper-button-next, .swiper-button-prev {
- 
+.swiper-button-next,
+.swiper-button-prev {
   height: 10px !important;
   width: 6px !important;
 }
-.swiper-button-next svg, .swiper-button-prev svg {
+.swiper-button-next svg,
+.swiper-button-prev svg {
   width: 100%;
-  height: 100%; 
+  height: 100%;
 }
 /* 
 .swiper-button-next svg, .swiper-button-prev svg {
@@ -1081,8 +1096,6 @@ font-size: 24px;
   width: 6px !important;
 } */
 
-
- 
 .header-container .nav-active .nav-link {
   color: #0069c6 !important;
   border: 1px solid #0069c6;
@@ -1091,9 +1104,6 @@ font-size: 24px;
   margin-top: 4px;
 }
 
-
-
- 
 /* <div class="product-image col-lg-6">
 <img src="" alt=""  id="productImage" />
 </div> */
