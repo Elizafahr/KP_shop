@@ -177,6 +177,7 @@ OrderMakeBtn.addEventListener("submit", showOrderConfirmation());
 
 // Функция для отображения всплывающего окна с данными заказа
 function showOrderConfirmation() {
+
   const date = new Date().toLocaleDateString(); // Текущая дата
   let price = 0;
   let Quantity = 0;
@@ -223,4 +224,13 @@ function showOrderConfirmation() {
   if (Object.keys(userData2).length <= 0) {
     userData2 = storedUserOld2;
   }
+
+
 }
+document.getElementById('orderFormElement').addEventListener('submit', function (event) {
+  if (!this.checkValidity()) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
+  this.classList.add('was-validated');
+});

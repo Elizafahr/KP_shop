@@ -107,16 +107,15 @@
         <!-- Вкладка "Регистрация" -->
         <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
           <form action="" method="post" class="d-flex flex-column gap-2">
-            <input class="form-control" type="text" name="username" placeholder="Имя" />
-            <input class="form-control" type="text" name="surname" placeholder="Фамилия" />
-            <input class="form-control" type="text" name="phoneNumber" placeholder="Номер телефона" />
+            <input class="form-control" type="text" name="username" placeholder="Имя" required />
+            <input class="form-control" type="text" name="surname" placeholder="Фамилия" required />
+            <input class="form-control" type="tel" name="phoneNumber" placeholder="Номер телефона" required />
             <input class="form-control" value="user" type="hidden" name="role" />
             <input class="form-control" value="false" type="hidden" name="ordered" />
-            <input class="form-control" type="text" name="adress" placeholder="adress" />
-
-            <input class="form-control" type="text" name="email" placeholder="E-mail" />
-            <input class="form-control" type="password" name="password" placeholder="Пароль" />
-            <button type=" " name="register" class="btn btn-primary">
+            <input class="form-control" type="text" name="adress" placeholder="адрес" required />
+            <input class="form-control" type="email" name="email" placeholder="E-mail" required />
+            <input class="form-control" type="password" name="password" placeholder="Пароль" required />
+            <button type="submit" name="register" class="btn btn-primary">
               Зарегистрироваться
             </button>
           </form>
@@ -182,7 +181,7 @@
   </div>
   <script>
     //auth-reg
- //auth-reg
+    //auth-reg
 
     //admin
     localStorage.setItem(
@@ -213,7 +212,7 @@
         ordered: "true",
       })
     );
-     //Обработка формы регистрации
+    //Обработка формы регистрации
     document
       .querySelector("#register")
       .addEventListener("submit", function (event) {
